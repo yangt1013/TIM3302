@@ -1,0 +1,585 @@
+(py38) ty@ty:~/文档/4/对比实验代码/2022/FicNet-main$ python trainer.py -batch 64  -data_dir  /home/ty/文档/4/对比实验代码/2022/FicNet-main/datasets/ -dataset miniimagenet -gpu 0,1 -extra_dir your_run -temperature_attn 2.0 -lamb 1.5 -shot 1 -milestones 50 60 70
+{'batch': 64,
+ 'data_dir': '/home/ty/文档/4/对比实验代码/2022/FicNet-main/datasets/',
+ 'dataset': 'miniimagenet',
+ 'extra_dir': 'your_run',
+ 'gamma': 0.05,
+ 'gpu': '0,1',
+ 'lamb': 1.5,
+ 'lr': 0.1,
+ 'max_epoch': 80,
+ 'milestones': [50, 60, 70],
+ 'no_wandb': False,
+ 'query': 15,
+ 'save_all': False,
+ 'seed': 1,
+ 'self_method': 'mfn',
+ 'shot': 1,
+ 'temperature': 0.2,
+ 'temperature_attn': 2.0,
+ 'test_episode': 1200,
+ 'val_episode': 200,
+ 'way': 5}
+use gpu: [0, 1]
+manual seed: 1
+manual seed: 1
+manual seed: 1
+[train] epo:  1 | avg.loss:8.9883 | avg.acc:38.586 (curr:44.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [00:52<00:00,  2.51it/s]
+[ val ] epo:  1 | avg.loss:1.6094 | avg.acc:20.500 (curr:25.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:21<00:00,  9.40it/s]
+[test ] epo:  1 | avg.loss:1.6094 | avg.acc:20.070 (curr:24.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:05<00:00,  9.55it/s]
+Epoch: 1, Train Loss: 8.988334, Train Acc: 38.585865
+Epoch: 1, Val Loss: 1.609438, Val Acc: 20.500002
+[ log ] *********A better model is found 20.500 in 0 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 4.43 h left
+
+[train] epo:  2 | avg.loss:7.7952 | avg.acc:46.960 (curr:64.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:19<00:00,  1.67it/s]
+[ val ] epo:  2 | avg.loss:1.6094 | avg.acc:19.973 (curr:21.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:31<00:00,  6.32it/s]
+[test ] epo:  2 | avg.loss:1.6094 | avg.acc:20.073 (curr:20.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:08<00:00,  6.35it/s]
+Epoch: 2, Train Loss: 7.795203, Train Acc: 46.959595
+Epoch: 2, Val Loss: 1.609437, Val Acc: 19.973333
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 6.53 h left
+
+[train] epo:  3 | avg.loss:7.0327 | avg.acc:52.141 (curr:38.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:12<00:00,  1.82it/s]
+[ val ] epo:  3 | avg.loss:1.6094 | avg.acc:20.293 (curr:22.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:33<00:00,  5.99it/s]
+Epoch: 3, Train Loss: 7.032718, Train Acc: 52.141418
+Epoch: 3, Val Loss: 1.609438, Val Acc: 20.293333
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.29 h left
+
+[train] epo:  4 | avg.loss:6.5990 | avg.acc:54.182 (curr:82.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:09<00:00,  1.90it/s]
+[ val ] epo:  4 | avg.loss:1.6094 | avg.acc:20.300 (curr:21.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:30<00:00,  6.61it/s]
+Epoch: 4, Train Loss: 6.599002, Train Acc: 54.181824
+Epoch: 4, Val Loss: 1.609438, Val Acc: 20.299999
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.13 h left
+
+[train] epo:  5 | avg.loss:6.4361 | avg.acc:55.758 (curr:53.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:20<00:00,  1.63it/s]
+[ val ] epo:  5 | avg.loss:1.6094 | avg.acc:20.247 (curr:22.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:41<00:00,  4.81it/s]
+Epoch: 5, Train Loss: 6.436100, Train Acc: 55.757576
+Epoch: 5, Val Loss: 1.609438, Val Acc: 20.246666
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.58 h left
+
+[train] epo:  6 | avg.loss:6.2145 | avg.acc:57.687 (curr:45.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:38<00:00,  1.34it/s]
+[ val ] epo:  6 | avg.loss:1.6094 | avg.acc:20.513 (curr:21.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:40<00:00,  4.91it/s]
+Epoch: 6, Train Loss: 6.214542, Train Acc: 57.686874
+Epoch: 6, Val Loss: 1.609438, Val Acc: 20.513332
+[ log ] *********A better model is found 20.513 in 1 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.89 h left
+
+[train] epo:  7 | avg.loss:6.1589 | avg.acc:60.485 (curr:66.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:27<00:00,  1.51it/s]
+[ val ] epo:  7 | avg.loss:1.6094 | avg.acc:20.100 (curr:17.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:41<00:00,  4.87it/s]
+Epoch: 7, Train Loss: 6.158854, Train Acc: 60.484848
+Epoch: 7, Val Loss: 1.609438, Val Acc: 20.100000
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.63 h left
+
+[train] epo:  8 | avg.loss:6.3966 | avg.acc:55.364 (curr:42.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.53it/s]
+[ val ] epo:  8 | avg.loss:1.6094 | avg.acc:19.773 (curr:24.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:44<00:00,  4.53it/s]
+Epoch: 8, Train Loss: 6.396554, Train Acc: 55.363636
+Epoch: 8, Val Loss: 1.609438, Val Acc: 19.773333
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.64 h left
+
+[train] epo:  9 | avg.loss:6.2867 | avg.acc:56.636 (curr:64.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:40<00:00,  1.31it/s]
+[ val ] epo:  9 | avg.loss:1.6094 | avg.acc:20.567 (curr:22.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:40<00:00,  4.99it/s]
+Epoch: 9, Train Loss: 6.286687, Train Acc: 56.636364
+Epoch: 9, Val Loss: 1.609437, Val Acc: 20.566668
+[ log ] *********A better model is found 20.567 in 6 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.81 h left
+
+[train] epo: 10 | avg.loss:6.0058 | avg.acc:59.414 (curr:48.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:22<00:00,  1.60it/s]
+[ val ] epo: 10 | avg.loss:1.6094 | avg.acc:20.233 (curr:21.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:40<00:00,  4.95it/s]
+[test ] epo: 10 | avg.loss:1.6094 | avg.acc:19.879 (curr:20.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [04:08<00:00,  4.83it/s]
+Epoch: 10, Train Loss: 6.005846, Train Acc: 59.414150
+Epoch: 10, Val Loss: 1.609438, Val Acc: 20.233334
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 7.24 h left
+
+[train] epo: 11 | avg.loss:6.0148 | avg.acc:58.121 (curr:37.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:32<00:00,  1.43it/s]
+[ val ] epo: 11 | avg.loss:1.6094 | avg.acc:19.733 (curr:18.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:33<00:00,  6.01it/s]
+Epoch: 11, Train Loss: 6.014750, Train Acc: 58.121220
+Epoch: 11, Val Loss: 1.609438, Val Acc: 19.733334
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.42 h left
+
+[train] epo: 12 | avg.loss:5.8290 | avg.acc:60.040 (curr:54.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:21<00:00,  1.63it/s]
+[ val ] epo: 12 | avg.loss:1.6094 | avg.acc:20.120 (curr:18.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:29<00:00,  6.68it/s]
+Epoch: 12, Train Loss: 5.829041, Train Acc: 60.040409
+Epoch: 12, Val Loss: 1.609438, Val Acc: 20.120003
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.13 h left
+
+[train] epo: 13 | avg.loss:5.4763 | avg.acc:62.848 (curr:68.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:18<00:00,  1.68it/s]
+[ val ] epo: 13 | avg.loss:1.6094 | avg.acc:20.180 (curr:21.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:27<00:00,  7.22it/s]
+Epoch: 13, Train Loss: 5.476315, Train Acc: 62.848484
+Epoch: 13, Val Loss: 1.609438, Val Acc: 20.180000
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.00 h left
+
+[train] epo: 14 | avg.loss:5.4180 | avg.acc:63.192 (curr:54.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:21<00:00,  1.62it/s]
+[ val ] epo: 14 | avg.loss:1.6094 | avg.acc:20.713 (curr:26.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:29<00:00,  6.71it/s]
+Epoch: 14, Train Loss: 5.417977, Train Acc: 63.191925
+Epoch: 14, Val Loss: 1.609438, Val Acc: 20.713335
+[ log ] *********A better model is found 20.713 in 9 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.06 h left
+
+[train] epo: 15 | avg.loss:5.2078 | avg.acc:66.061 (curr:57.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:25<00:00,  1.54it/s]
+[ val ] epo: 15 | avg.loss:1.6094 | avg.acc:20.660 (curr:17.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:31<00:00,  6.27it/s]
+Epoch: 15, Train Loss: 5.207761, Train Acc: 66.060616
+Epoch: 15, Val Loss: 1.609438, Val Acc: 20.660000
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.15 h left
+
+[train] epo: 16 | avg.loss:5.0777 | avg.acc:67.212 (curr:78.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:23<00:00,  1.58it/s]
+[ val ] epo: 16 | avg.loss:1.6094 | avg.acc:22.073 (curr:18.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:31<00:00,  6.40it/s]
+Epoch: 16, Train Loss: 5.077659, Train Acc: 67.212128
+Epoch: 16, Val Loss: 1.609438, Val Acc: 22.073336
+[ log ] *********A better model is found 22.073 in 14 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.07 h left
+
+[train] epo: 17 | avg.loss:4.9644 | avg.acc:67.707 (curr:68.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:24<00:00,  1.56it/s]
+[ val ] epo: 17 | avg.loss:1.6094 | avg.acc:28.393 (curr:25.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:32<00:00,  6.18it/s]
+Epoch: 17, Train Loss: 4.964372, Train Acc: 67.707077
+Epoch: 17, Val Loss: 1.609437, Val Acc: 28.393337
+[ log ] *********A better model is found 28.393 in 16 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.07 h left
+
+[train] epo: 18 | avg.loss:4.8919 | avg.acc:68.293 (curr:76.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.53it/s]
+[ val ] epo: 18 | avg.loss:1.6094 | avg.acc:30.433 (curr:34.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:28<00:00,  6.91it/s]
+Epoch: 18, Train Loss: 4.891918, Train Acc: 68.292931
+Epoch: 18, Val Loss: 1.609437, Val Acc: 30.433334
+[ log ] *********A better model is found 30.433 in 17 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.00 h left
+
+[train] epo: 19 | avg.loss:4.8840 | avg.acc:66.192 (curr:86.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.53it/s]
+[ val ] epo: 19 | avg.loss:1.6094 | avg.acc:32.273 (curr:37.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:31<00:00,  6.37it/s]
+Epoch: 19, Train Loss: 4.884037, Train Acc: 66.191917
+Epoch: 19, Val Loss: 1.609437, Val Acc: 32.273335
+[ log ] *********A better model is found 32.273 in 18 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.01 h left
+
+[train] epo: 20 | avg.loss:4.7138 | avg.acc:69.869 (curr:88.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:10<00:00,  1.87it/s]
+[ val ] epo: 20 | avg.loss:1.6094 | avg.acc:34.153 (curr:26.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:29<00:00,  6.75it/s]
+[test ] epo: 20 | avg.loss:1.6094 | avg.acc:36.204 (curr:34.667): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:05<00:00,  6.47it/s]
+Epoch: 20, Train Loss: 4.713809, Train Acc: 69.868690
+Epoch: 20, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] *********A better model is found 34.153 in 19 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 4.79 h left
+
+[train] epo: 21 | avg.loss:4.6793 | avg.acc:68.960 (curr:88.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:19<00:00,  1.66it/s]
+Epoch: 21, Train Loss: 4.679308, Train Acc: 68.959595
+Epoch: 21, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.32 h left
+
+[train] epo: 22 | avg.loss:4.5988 | avg.acc:70.354 (curr:80.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.53it/s]
+Epoch: 22, Train Loss: 4.598777, Train Acc: 70.353539
+Epoch: 22, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.42 h left
+
+[train] epo: 23 | avg.loss:4.5925 | avg.acc:68.758 (curr:58.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:14<00:00,  1.78it/s]
+Epoch: 23, Train Loss: 4.592466, Train Acc: 68.757584
+Epoch: 23, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.21 h left
+
+[train] epo: 24 | avg.loss:4.3892 | avg.acc:71.111 (curr:77.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:30<00:00,  1.46it/s]
+Epoch: 24, Train Loss: 4.389190, Train Acc: 71.111115
+Epoch: 24, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.43 h left
+
+[train] epo: 25 | avg.loss:4.2854 | avg.acc:72.929 (curr:85.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:09<00:00,  1.90it/s]
+Epoch: 25, Train Loss: 4.285435, Train Acc: 72.929291
+Epoch: 25, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.08 h left
+
+[train] epo: 26 | avg.loss:4.2711 | avg.acc:72.586 (curr:62.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:20<00:00,  1.64it/s]
+Epoch: 26, Train Loss: 4.271080, Train Acc: 72.585854
+Epoch: 26, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.22 h left
+
+[train] epo: 27 | avg.loss:4.2583 | avg.acc:71.545 (curr:68.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:09<00:00,  1.90it/s]
+Epoch: 27, Train Loss: 4.258293, Train Acc: 71.545456
+Epoch: 27, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.04 h left
+
+[train] epo: 28 | avg.loss:4.3336 | avg.acc:69.950 (curr:65.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.49it/s]
+Epoch: 28, Train Loss: 4.333604, Train Acc: 69.949501
+Epoch: 28, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.30 h left
+
+[train] epo: 29 | avg.loss:4.1573 | avg.acc:73.434 (curr:62.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:22<00:00,  1.60it/s]
+Epoch: 29, Train Loss: 4.157259, Train Acc: 73.434341
+Epoch: 29, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.19 h left
+
+[train] epo: 30 | avg.loss:4.2215 | avg.acc:70.444 (curr:90.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.49it/s]
+[test ] epo: 30 | avg.loss:1.5813 | avg.acc:34.080 (curr:44.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:17<00:00,  6.07it/s]
+Epoch: 30, Train Loss: 4.221500, Train Acc: 70.444458
+Epoch: 30, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 3.98 h left
+
+[train] epo: 31 | avg.loss:4.0624 | avg.acc:73.172 (curr:72.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:30<00:00,  1.46it/s]
+Epoch: 31, Train Loss: 4.062359, Train Acc: 73.171722
+Epoch: 31, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.25 h left
+
+[train] epo: 32 | avg.loss:4.0524 | avg.acc:72.606 (curr:69.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:22<00:00,  1.60it/s]
+Epoch: 32, Train Loss: 4.052406, Train Acc: 72.606064
+Epoch: 32, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.11 h left
+
+[train] epo: 33 | avg.loss:3.9925 | avg.acc:73.646 (curr:69.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.49it/s]
+Epoch: 33, Train Loss: 3.992461, Train Acc: 73.646469
+Epoch: 33, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.17 h left
+
+[train] epo: 34 | avg.loss:3.8426 | avg.acc:76.051 (curr:77.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:22<00:00,  1.60it/s]
+Epoch: 34, Train Loss: 3.842615, Train Acc: 76.050507
+Epoch: 34, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.07 h left
+
+[train] epo: 35 | avg.loss:3.7762 | avg.acc:76.576 (curr:88.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:27<00:00,  1.51it/s]
+Epoch: 35, Train Loss: 3.776234, Train Acc: 76.575760
+Epoch: 35, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.11 h left
+
+[train] epo: 36 | avg.loss:3.7767 | avg.acc:75.364 (curr:58.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:16<00:00,  1.72it/s]
+Epoch: 36, Train Loss: 3.776722, Train Acc: 75.363640
+Epoch: 36, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.96 h left
+
+[train] epo: 37 | avg.loss:3.7328 | avg.acc:76.192 (curr:94.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:05<00:00,  2.01it/s]
+Epoch: 37, Train Loss: 3.732786, Train Acc: 76.191917
+Epoch: 37, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.80 h left
+
+[train] epo: 38 | avg.loss:3.7113 | avg.acc:75.778 (curr:88.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:04<00:00,  2.06it/s]
+Epoch: 38, Train Loss: 3.711296, Train Acc: 75.777779
+Epoch: 38, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.76 h left
+
+[train] epo: 39 | avg.loss:3.7134 | avg.acc:75.242 (curr:61.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:09<00:00,  1.89it/s]
+Epoch: 39, Train Loss: 3.713404, Train Acc: 75.242432
+Epoch: 39, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.81 h left
+
+[train] epo: 40 | avg.loss:3.7050 | avg.acc:74.939 (curr:82.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:29<00:00,  1.48it/s]
+[test ] epo: 40 | avg.loss:1.5055 | avg.acc:36.324 (curr:30.667): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:24<00:00,  5.86it/s]
+Epoch: 40, Train Loss: 3.705027, Train Acc: 74.939392
+Epoch: 40, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 3.28 h left
+
+[train] epo: 41 | avg.loss:3.6491 | avg.acc:75.556 (curr:64.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:27<00:00,  1.50it/s]
+Epoch: 41, Train Loss: 3.649136, Train Acc: 75.555557
+Epoch: 41, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.98 h left
+
+[train] epo: 42 | avg.loss:3.5899 | avg.acc:77.606 (curr:97.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:29<00:00,  1.48it/s]
+Epoch: 42, Train Loss: 3.589879, Train Acc: 77.606071
+Epoch: 42, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.96 h left
+
+[train] epo: 43 | avg.loss:3.5373 | avg.acc:78.313 (curr:68.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:29<00:00,  1.47it/s]
+Epoch: 43, Train Loss: 3.537268, Train Acc: 78.313126
+Epoch: 43, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.94 h left
+
+[train] epo: 44 | avg.loss:3.5374 | avg.acc:76.263 (curr:90.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:27<00:00,  1.51it/s]
+Epoch: 44, Train Loss: 3.537369, Train Acc: 76.262627
+Epoch: 44, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.89 h left
+
+[train] epo: 45 | avg.loss:3.4236 | avg.acc:78.950 (curr:85.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.49it/s]
+Epoch: 45, Train Loss: 3.423554, Train Acc: 78.949501
+Epoch: 45, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.87 h left
+
+[train] epo: 46 | avg.loss:3.4177 | avg.acc:79.051 (curr:81.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.49it/s]
+Epoch: 46, Train Loss: 3.417716, Train Acc: 79.050507
+Epoch: 46, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.85 h left
+
+[train] epo: 47 | avg.loss:3.4224 | avg.acc:77.828 (curr:94.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.52it/s]
+Epoch: 47, Train Loss: 3.422443, Train Acc: 77.828278
+Epoch: 47, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.81 h left
+
+[train] epo: 48 | avg.loss:3.4160 | avg.acc:79.071 (curr:92.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.53it/s]
+Epoch: 48, Train Loss: 3.415956, Train Acc: 79.070702
+Epoch: 48, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.78 h left
+
+[train] epo: 49 | avg.loss:3.3551 | avg.acc:78.697 (curr:76.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:20<00:00,  1.64it/s]
+Epoch: 49, Train Loss: 3.355083, Train Acc: 78.696968
+Epoch: 49, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.71 h left
+
+[train] epo: 50 | avg.loss:3.3035 | avg.acc:80.293 (curr:89.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:22<00:00,  1.59it/s]
+[test ] epo: 50 | avg.loss:1.5291 | avg.acc:35.846 (curr:45.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:02<00:00,  6.57it/s]
+Epoch: 50, Train Loss: 3.303479, Train Acc: 80.292931
+Epoch: 50, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.22 h left
+
+[train] epo: 51 | avg.loss:2.6699 | avg.acc:82.636 (curr:68.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.53it/s]
+Epoch: 51, Train Loss: 2.669868, Train Acc: 82.636368
+Epoch: 51, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.70 h left
+
+[train] epo: 52 | avg.loss:2.3197 | avg.acc:86.061 (curr:100.000): 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.49it/s]
+Epoch: 52, Train Loss: 2.319661, Train Acc: 86.060608
+Epoch: 52, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.70 h left
+
+[train] epo: 53 | avg.loss:2.1493 | avg.acc:87.192 (curr:73.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:29<00:00,  1.48it/s]
+Epoch: 53, Train Loss: 2.149302, Train Acc: 87.191925
+Epoch: 53, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.68 h left
+
+[train] epo: 54 | avg.loss:1.9972 | avg.acc:88.717 (curr:78.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.49it/s]
+Epoch: 54, Train Loss: 1.997192, Train Acc: 88.717171
+Epoch: 54, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.65 h left
+
+[train] epo: 55 | avg.loss:1.9902 | avg.acc:88.040 (curr:96.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.50it/s]
+Epoch: 55, Train Loss: 1.990218, Train Acc: 88.040405
+Epoch: 55, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.62 h left
+
+[train] epo: 56 | avg.loss:1.8641 | avg.acc:89.616 (curr:92.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.49it/s]
+Epoch: 56, Train Loss: 1.864052, Train Acc: 89.616165
+Epoch: 56, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.60 h left
+
+[train] epo: 57 | avg.loss:1.9010 | avg.acc:88.455 (curr:77.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:27<00:00,  1.51it/s]
+Epoch: 57, Train Loss: 1.901026, Train Acc: 88.454552
+Epoch: 57, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.57 h left
+
+[train] epo: 58 | avg.loss:1.7766 | avg.acc:90.111 (curr:78.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.52it/s]
+Epoch: 58, Train Loss: 1.776585, Train Acc: 90.111122
+Epoch: 58, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.54 h left
+
+[train] epo: 59 | avg.loss:1.8015 | avg.acc:89.010 (curr:89.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:28<00:00,  1.49it/s]
+Epoch: 59, Train Loss: 1.801470, Train Acc: 89.010117
+Epoch: 59, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.53 h left
+
+[train] epo: 60 | avg.loss:1.7417 | avg.acc:90.061 (curr:100.000): 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:19<00:00,  1.66it/s]
+[test ] epo: 60 | avg.loss:1.5397 | avg.acc:35.437 (curr:36.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:20<00:00,  5.99it/s]
+Epoch: 60, Train Loss: 1.741727, Train Acc: 90.060623
+Epoch: 60, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.56 h left
+
+[train] epo: 61 | avg.loss:1.6750 | avg.acc:91.081 (curr:98.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.53it/s]
+Epoch: 61, Train Loss: 1.675022, Train Acc: 91.080803
+Epoch: 61, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.46 h left
+
+[train] epo: 62 | avg.loss:1.7442 | avg.acc:89.152 (curr:93.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:26<00:00,  1.52it/s]
+Epoch: 62, Train Loss: 1.744196, Train Acc: 89.151512
+Epoch: 62, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.44 h left
+
+[train] epo: 63 | avg.loss:1.7050 | avg.acc:90.414 (curr:90.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:19<00:00,  1.66it/s]
+Epoch: 63, Train Loss: 1.704987, Train Acc: 90.414146
+Epoch: 63, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.38 h left
+
+[train] epo: 64 | avg.loss:1.6853 | avg.acc:90.576 (curr:96.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:17<00:00,  1.71it/s]
+Epoch: 64, Train Loss: 1.685323, Train Acc: 90.575760
+Epoch: 64, Val Loss: 1.609436, Val Acc: 34.153336
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.35 h left
+
+[train] epo: 65 | avg.loss:1.7059 | avg.acc:90.172 (curr:100.000): 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:24<00:00,  1.57it/s]
+[ val ] epo: 65 | avg.loss:1.5355 | avg.acc:36.668 (curr:48.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:24<00:00,  5.86it/s]
+[test ] epo: 65 | avg.loss:1.5372 | avg.acc:35.272 (curr:22.667): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [04:11<00:00,  4.76it/s]
+Epoch: 65, Train Loss: 1.705895, Train Acc: 90.171722
+Epoch: 65, Val Loss: 1.535481, Val Acc: 36.667782
+[ log ] *********A better model is found 36.668 in 20 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.56 h left
+
+[train] epo: 66 | avg.loss:1.6753 | avg.acc:90.455 (curr:93.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:31<00:00,  1.44it/s]
+[ val ] epo: 66 | avg.loss:1.5305 | avg.acc:36.493 (curr:48.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [04:13<00:00,  4.74it/s]
+[test ] epo: 66 | avg.loss:1.5349 | avg.acc:35.296 (curr:28.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [04:02<00:00,  4.94it/s]
+Epoch: 66, Train Loss: 1.675345, Train Acc: 90.454552
+Epoch: 66, Val Loss: 1.530484, Val Acc: 36.493332
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 2.29 h left
+
+[train] epo: 67 | avg.loss:1.7582 | avg.acc:89.455 (curr:97.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:15<00:00,  1.75it/s]
+[ val ] epo: 67 | avg.loss:1.5388 | avg.acc:36.566 (curr:45.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:47<00:00,  7.15it/s]
+[test ] epo: 67 | avg.loss:1.5318 | avg.acc:35.722 (curr:25.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:09<00:00,  6.33it/s]
+Epoch: 67, Train Loss: 1.758202, Train Acc: 89.454544
+Epoch: 67, Val Loss: 1.538846, Val Acc: 36.565556
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.57 h left
+
+[train] epo: 68 | avg.loss:1.6739 | avg.acc:89.909 (curr:90.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:04<00:00,  2.04it/s]
+[ val ] epo: 68 | avg.loss:1.5374 | avg.acc:36.464 (curr:49.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:04<00:00,  6.49it/s]
+[test ] epo: 68 | avg.loss:1.5284 | avg.acc:35.856 (curr:54.667): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:04<00:00,  6.49it/s]
+Epoch: 68, Train Loss: 1.673852, Train Acc: 89.909096
+Epoch: 68, Val Loss: 1.537365, Val Acc: 36.464447
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.45 h left
+
+[train] epo: 69 | avg.loss:1.6573 | avg.acc:90.394 (curr:94.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:09<00:00,  1.89it/s]
+[ val ] epo: 69 | avg.loss:1.5332 | avg.acc:36.607 (curr:49.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:05<00:00,  6.46it/s]
+[test ] epo: 69 | avg.loss:1.5452 | avg.acc:35.176 (curr:37.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:09<00:00,  6.34it/s]
+Epoch: 69, Train Loss: 1.657278, Train Acc: 90.393944
+Epoch: 69, Val Loss: 1.533225, Val Acc: 36.606674
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.36 h left
+
+[train] epo: 70 | avg.loss:1.6554 | avg.acc:90.758 (curr:84.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:18<00:00,  1.67it/s]
+[ val ] epo: 70 | avg.loss:1.5393 | avg.acc:36.572 (curr:48.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:00<00:00,  6.66it/s]
+[test ] epo: 70 | avg.loss:1.5312 | avg.acc:35.742 (curr:36.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:57<00:00,  6.77it/s]
+Epoch: 70, Train Loss: 1.655360, Train Acc: 90.757576
+Epoch: 70, Val Loss: 1.539297, Val Acc: 36.572224
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 1.22 h left
+
+[train] epo: 71 | avg.loss:1.6753 | avg.acc:90.263 (curr:90.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [00:54<00:00,  2.44it/s]
+[ val ] epo: 71 | avg.loss:1.5339 | avg.acc:36.517 (curr:49.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:06<00:00,  9.46it/s]
+[test ] epo: 71 | avg.loss:1.5258 | avg.acc:36.052 (curr:36.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:13<00:00,  9.02it/s]
+Epoch: 71, Train Loss: 1.675345, Train Acc: 90.262634
+Epoch: 71, Val Loss: 1.533902, Val Acc: 36.516670
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.79 h left
+
+[train] epo: 72 | avg.loss:1.6040 | avg.acc:92.253 (curr:94.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [00:53<00:00,  2.47it/s]
+[ val ] epo: 72 | avg.loss:1.5353 | avg.acc:36.574 (curr:49.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:06<00:00,  9.50it/s]
+[test ] epo: 72 | avg.loss:1.5217 | avg.acc:36.048 (curr:46.667): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:12<00:00,  9.06it/s]
+Epoch: 72, Train Loss: 1.603998, Train Acc: 92.252533
+Epoch: 72, Val Loss: 1.535345, Val Acc: 36.574444
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.70 h left
+
+[train] epo: 73 | avg.loss:1.6537 | avg.acc:90.747 (curr:90.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [00:53<00:00,  2.45it/s]
+[ val ] epo: 73 | avg.loss:1.5380 | avg.acc:36.531 (curr:49.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:06<00:00,  9.49it/s]
+[test ] epo: 73 | avg.loss:1.5459 | avg.acc:35.041 (curr:29.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:12<00:00,  9.08it/s]
+Epoch: 73, Train Loss: 1.653749, Train Acc: 90.747475
+Epoch: 73, Val Loss: 1.538015, Val Acc: 36.531109
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.61 h left
+
+[train] epo: 74 | avg.loss:1.6743 | avg.acc:90.475 (curr:96.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [00:53<00:00,  2.46it/s]
+[ val ] epo: 74 | avg.loss:1.5380 | avg.acc:36.527 (curr:49.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:06<00:00,  9.47it/s]
+[test ] epo: 74 | avg.loss:1.5241 | avg.acc:36.103 (curr:29.333):  68%|███████████████████████████████████████████████████████████████████████▋                                 | 819/1200 [01:30<00:43,  8[test ] epo: 74 | avg.loss:1.5242 | avg.acc:36.091 (curr:26.667):  68%|███████████████████████████████████████████████████████████████████████▋                                 | 819/1200 [01:30<00:43,  8[test ] epo: 74 [test ] epo: 74 | avg.loss:1.5263 | avg.acc:36.063 (curr:26.667): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:13<00:00,  9.02it/s]
+Epoch: 74, Train Loss: 1.674255, Train Acc: 90.474739
+Epoch: 74, Val Loss: 1.537976, Val Acc: 36.526669
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.52 h left
+
+[train] epo: 75 | avg.loss:1.6816 | avg.acc:90.869 (curr:96.000): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [00:53<00:00,  2.45it/s]
+[ val ] epo: 75 | avg.loss:1.5364 | avg.acc:36.706 (curr:45.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [02:09<00:00,  9.30it/s]
+[test ] epo: 75 | avg.loss:1.5234 | avg.acc:36.270 (curr:40.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:13<00:00,  6.21it/s]
+Epoch: 75, Train Loss: 1.681596, Train Acc: 90.868698
+Epoch: 75, Val Loss: 1.536423, Val Acc: 36.705555
+[ log ] *********A better model is found 36.706 in 65 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.53 h left
+
+[train] epo: 76 | avg.loss:1.6344 | avg.acc:90.889 (curr:98.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:23<00:00,  1.57it/s]
+[ val ] epo: 76 | avg.loss:1.5338 | avg.acc:36.756 (curr:48.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:56<00:00,  5.08it/s]
+[test ] epo: 76 | avg.loss:1.5391 | avg.acc:35.472 (curr:41.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:55<00:00,  5.10it/s]
+Epoch: 76, Train Loss: 1.634363, Train Acc: 90.888901
+Epoch: 76, Val Loss: 1.533789, Val Acc: 36.755558
+[ log ] *********A better model is found 36.756 in 75 th epoch*********
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.62 h left
+
+[train] epo: 77 | avg.loss:1.6751 | avg.acc:89.889 (curr:85.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:19<00:00,  1.65it/s]
+[ val ] epo: 77 | avg.loss:1.5333 | avg.acc:36.564 (curr:48.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:56<00:00,  5.07it/s]
+[test ] epo: 77 | avg.loss:1.5373 | avg.acc:35.434 (curr:24.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [04:05<00:00,  4.90it/s]
+Epoch: 77, Train Loss: 1.675128, Train Acc: 89.888893
+Epoch: 77, Val Loss: 1.533316, Val Acc: 36.564442
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.47 h left
+
+[train] epo: 78 | avg.loss:1.6269 | avg.acc:91.303 (curr:78.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:23<00:00,  1.57it/s]
+[ val ] epo: 78 | avg.loss:1.5403 | avg.acc:36.438 (curr:49.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [04:01<00:00,  4.97it/s]
+[test ] epo: 78 | avg.loss:1.5376 | avg.acc:35.646 (curr:30.667): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [04:06<00:00,  4.87it/s]
+Epoch: 78, Train Loss: 1.626918, Train Acc: 91.303047
+Epoch: 78, Val Loss: 1.540254, Val Acc: 36.437778
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.32 h left
+
+[train] epo: 79 | avg.loss:1.6770 | avg.acc:90.394 (curr:98.667): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:34<00:00,  1.40it/s]
+[ val ] epo: 79 | avg.loss:1.5340 | avg.acc:36.572 (curr:49.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:52<00:00,  5.16it/s]
+[test ] epo: 79 | avg.loss:1.5391 | avg.acc:35.117 (curr:42.667): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:48<00:00,  5.25it/s]
+Epoch: 79, Train Loss: 1.676954, Train Acc: 90.393944
+Epoch: 79, Val Loss: 1.534027, Val Acc: 36.572224
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.15 h left
+
+[train] epo: 80 | avg.loss:1.6466 | avg.acc:90.737 (curr:89.333): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 132/132 [01:41<00:00,  1.30it/s]
+[ val ] epo: 80 | avg.loss:1.5408 | avg.acc:36.512 (curr:48.000): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:51<00:00,  5.18it/s]
+[test ] epo: 80 | avg.loss:1.5240 | avg.acc:36.028 (curr:41.333): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [04:13<00:00,  4.73it/s]
+Epoch: 80, Train Loss: 1.646613, Train Acc: 90.737381
+Epoch: 80, Val Loss: 1.540801, Val Acc: 36.512222
+[ log ] saving @ checkpoints/miniimagenet/1shot-5way/your_run
+[ log ] roughly 0.00 h left
+
+[ log ] *********A better model is found 36.756 in 76 th epoch*********
+best performance is 36.324 in 40 th epoch
+all state_dict keys match, loading model from : checkpoints/miniimagenet/1shot-5way/your_run/max_acc.pth
+manual seed: 1
+[test ] epo:best | avg.loss:1.5364 | avg.acc:35.432 (curr:42.667): 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 1200/1200 [03:49<00:00,  5.22it/s]
+[final] epo:best | 35.432 +- 0.497
+ test/acc:35.432220458984375  test/confidence_interval: 0.49714821577072144
