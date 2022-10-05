@@ -1,0 +1,29 @@
+/home/ty/anaconda3/envs/py38/bin/python /home/ty/文档/4/对比实验代码/2022/FicNet-main（12）/test.py 
+{'batch': 64,
+ 'data_dir': 'datasets',
+ 'dataset': 'miniimagenet',
+ 'extra_dir': 'test',
+ 'gamma': 0.05,
+ 'gpu': '0,1',
+ 'lamb': 1.5,
+ 'lr': 0.1,
+ 'max_epoch': 80,
+ 'milestones': [60, 70],
+ 'no_wandb': True,
+ 'query': 15,
+ 'save_all': False,
+ 'seed': 1,
+ 'self_method': 'mfn',
+ 'shot': 5,
+ 'temperature': 0.2,
+ 'temperature_attn': 1.0,
+ 'test_episode': 1200,
+ 'val_episode': 200,
+ 'way': 5}
+use gpu: [0, 1]
+all state_dict keys match, loading model from : checkpoints/miniimagenet/5shot-5way/test/max_acc.pth
+manual seed: 1
+[test ] epo:best | avg.loss:1.3317 | avg.acc:46.279 (curr:52.000): 100%|██████████| 1200/1200 [01:36<00:00, 12.38it/s]
+[final] epo:best | 46.279 +- 0.502
+
+Process finished with exit code 0
