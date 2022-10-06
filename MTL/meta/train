@@ -1,0 +1,191 @@
+/home/ty/anaconda3/envs/py37/bin/python /home/ty/文档/4/对比实验代码/meta-transfer-learning-main/pytorch/run_meta.py 
+{'base_lr': 0.01,
+ 'dataset': 'MiniImageNet',
+ 'dataset_dir': './data/mini/',
+ 'eval_weights': None,
+ 'gamma': 0.5,
+ 'gpu': '1',
+ 'init_weights': None,
+ 'max_epoch': 10,
+ 'meta_label': 'exp1',
+ 'meta_lr1': 0.0001,
+ 'meta_lr2': 0.001,
+ 'model_type': 'ResNet',
+ 'num_batch': 100,
+ 'phase': 'meta_train',
+ 'pre_batch_size': 128,
+ 'pre_custom_momentum': 0.9,
+ 'pre_custom_weight_decay': 0.0005,
+ 'pre_gamma': 0.2,
+ 'pre_lr': 0.1,
+ 'pre_max_epoch': 100,
+ 'pre_step_size': 30,
+ 'seed': 0,
+ 'shot': 1,
+ 'step_size': 10,
+ 'train_query': 15,
+ 'update_step': 100,
+ 'val_query': 15,
+ 'way': 5}
+Using gpu: 1
+Using random seed.
+dict_keys(['encoder.conv1.weight', 'encoder.conv1.bias', 'encoder.bn1.weight', 'encoder.bn1.bias', 'encoder.bn1.running_mean', 'encoder.bn1.running_var', 'encoder.bn1.num_batches_tracked', 'encoder.layer1.0.conv1.weight', 'encoder.layer1.0.bn1.weight', 'encoder.layer1.0.bn1.bias', 'encoder.layer1.0.bn1.running_mean', 'encoder.layer1.0.bn1.running_var', 'encoder.layer1.0.bn1.num_batches_tracked', 'encoder.layer1.0.conv2.weight', 'encoder.layer1.0.bn2.weight', 'encoder.layer1.0.bn2.bias', 'encoder.layer1.0.bn2.running_mean', 'encoder.layer1.0.bn2.running_var', 'encoder.layer1.0.bn2.num_batches_tracked', 'encoder.layer1.0.downsample.0.weight', 'encoder.layer1.0.downsample.1.weight', 'encoder.layer1.0.downsample.1.bias', 'encoder.layer1.0.downsample.1.running_mean', 'encoder.layer1.0.downsample.1.running_var', 'encoder.layer1.0.downsample.1.num_batches_tracked', 'encoder.layer1.1.conv1.weight', 'encoder.layer1.1.bn1.weight', 'encoder.layer1.1.bn1.bias', 'encoder.layer1.1.bn1.running_mean', 'encoder.layer1.1.bn1.running_var', 'encoder.layer1.1.bn1.num_batches_tracked', 'encoder.layer1.1.conv2.weight', 'encoder.layer1.1.bn2.weight', 'encoder.layer1.1.bn2.bias', 'encoder.layer1.1.bn2.running_mean', 'encoder.layer1.1.bn2.running_var', 'encoder.layer1.1.bn2.num_batches_tracked', 'encoder.layer1.2.conv1.weight', 'encoder.layer1.2.bn1.weight', 'encoder.layer1.2.bn1.bias', 'encoder.layer1.2.bn1.running_mean', 'encoder.layer1.2.bn1.running_var', 'encoder.layer1.2.bn1.num_batches_tracked', 'encoder.layer1.2.conv2.weight', 'encoder.layer1.2.bn2.weight', 'encoder.layer1.2.bn2.bias', 'encoder.layer1.2.bn2.running_mean', 'encoder.layer1.2.bn2.running_var', 'encoder.layer1.2.bn2.num_batches_tracked', 'encoder.layer1.3.conv1.weight', 'encoder.layer1.3.bn1.weight', 'encoder.layer1.3.bn1.bias', 'encoder.layer1.3.bn1.running_mean', 'encoder.layer1.3.bn1.running_var', 'encoder.layer1.3.bn1.num_batches_tracked', 'encoder.layer1.3.conv2.weight', 'encoder.layer1.3.bn2.weight', 'encoder.layer1.3.bn2.bias', 'encoder.layer1.3.bn2.running_mean', 'encoder.layer1.3.bn2.running_var', 'encoder.layer1.3.bn2.num_batches_tracked', 'encoder.layer2.0.conv1.weight', 'encoder.layer2.0.bn1.weight', 'encoder.layer2.0.bn1.bias', 'encoder.layer2.0.bn1.running_mean', 'encoder.layer2.0.bn1.running_var', 'encoder.layer2.0.bn1.num_batches_tracked', 'encoder.layer2.0.conv2.weight', 'encoder.layer2.0.bn2.weight', 'encoder.layer2.0.bn2.bias', 'encoder.layer2.0.bn2.running_mean', 'encoder.layer2.0.bn2.running_var', 'encoder.layer2.0.bn2.num_batches_tracked', 'encoder.layer2.0.downsample.0.weight', 'encoder.layer2.0.downsample.1.weight', 'encoder.layer2.0.downsample.1.bias', 'encoder.layer2.0.downsample.1.running_mean', 'encoder.layer2.0.downsample.1.running_var', 'encoder.layer2.0.downsample.1.num_batches_tracked', 'encoder.layer2.1.conv1.weight', 'encoder.layer2.1.bn1.weight', 'encoder.layer2.1.bn1.bias', 'encoder.layer2.1.bn1.running_mean', 'encoder.layer2.1.bn1.running_var', 'encoder.layer2.1.bn1.num_batches_tracked', 'encoder.layer2.1.conv2.weight', 'encoder.layer2.1.bn2.weight', 'encoder.layer2.1.bn2.bias', 'encoder.layer2.1.bn2.running_mean', 'encoder.layer2.1.bn2.running_var', 'encoder.layer2.1.bn2.num_batches_tracked', 'encoder.layer2.2.conv1.weight', 'encoder.layer2.2.bn1.weight', 'encoder.layer2.2.bn1.bias', 'encoder.layer2.2.bn1.running_mean', 'encoder.layer2.2.bn1.running_var', 'encoder.layer2.2.bn1.num_batches_tracked', 'encoder.layer2.2.conv2.weight', 'encoder.layer2.2.bn2.weight', 'encoder.layer2.2.bn2.bias', 'encoder.layer2.2.bn2.running_mean', 'encoder.layer2.2.bn2.running_var', 'encoder.layer2.2.bn2.num_batches_tracked', 'encoder.layer2.3.conv1.weight', 'encoder.layer2.3.bn1.weight', 'encoder.layer2.3.bn1.bias', 'encoder.layer2.3.bn1.running_mean', 'encoder.layer2.3.bn1.running_var', 'encoder.layer2.3.bn1.num_batches_tracked', 'encoder.layer2.3.conv2.weight', 'encoder.layer2.3.bn2.weight', 'encoder.layer2.3.bn2.bias', 'encoder.layer2.3.bn2.running_mean', 'encoder.layer2.3.bn2.running_var', 'encoder.layer2.3.bn2.num_batches_tracked', 'encoder.layer3.0.conv1.weight', 'encoder.layer3.0.bn1.weight', 'encoder.layer3.0.bn1.bias', 'encoder.layer3.0.bn1.running_mean', 'encoder.layer3.0.bn1.running_var', 'encoder.layer3.0.bn1.num_batches_tracked', 'encoder.layer3.0.conv2.weight', 'encoder.layer3.0.bn2.weight', 'encoder.layer3.0.bn2.bias', 'encoder.layer3.0.bn2.running_mean', 'encoder.layer3.0.bn2.running_var', 'encoder.layer3.0.bn2.num_batches_tracked', 'encoder.layer3.0.downsample.0.weight', 'encoder.layer3.0.downsample.1.weight', 'encoder.layer3.0.downsample.1.bias', 'encoder.layer3.0.downsample.1.running_mean', 'encoder.layer3.0.downsample.1.running_var', 'encoder.layer3.0.downsample.1.num_batches_tracked', 'encoder.layer3.1.conv1.weight', 'encoder.layer3.1.bn1.weight', 'encoder.layer3.1.bn1.bias', 'encoder.layer3.1.bn1.running_mean', 'encoder.layer3.1.bn1.running_var', 'encoder.layer3.1.bn1.num_batches_tracked', 'encoder.layer3.1.conv2.weight', 'encoder.layer3.1.bn2.weight', 'encoder.layer3.1.bn2.bias', 'encoder.layer3.1.bn2.running_mean', 'encoder.layer3.1.bn2.running_var', 'encoder.layer3.1.bn2.num_batches_tracked', 'encoder.layer3.2.conv1.weight', 'encoder.layer3.2.bn1.weight', 'encoder.layer3.2.bn1.bias', 'encoder.layer3.2.bn1.running_mean', 'encoder.layer3.2.bn1.running_var', 'encoder.layer3.2.bn1.num_batches_tracked', 'encoder.layer3.2.conv2.weight', 'encoder.layer3.2.bn2.weight', 'encoder.layer3.2.bn2.bias', 'encoder.layer3.2.bn2.running_mean', 'encoder.layer3.2.bn2.running_var', 'encoder.layer3.2.bn2.num_batches_tracked', 'encoder.layer3.3.conv1.weight', 'encoder.layer3.3.bn1.weight', 'encoder.layer3.3.bn1.bias', 'encoder.layer3.3.bn1.running_mean', 'encoder.layer3.3.bn1.running_var', 'encoder.layer3.3.bn1.num_batches_tracked', 'encoder.layer3.3.conv2.weight', 'encoder.layer3.3.bn2.weight', 'encoder.layer3.3.bn2.bias', 'encoder.layer3.3.bn2.running_mean', 'encoder.layer3.3.bn2.running_var', 'encoder.layer3.3.bn2.num_batches_tracked'])
+/home/ty/anaconda3/envs/py37/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:136: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+Epoch 1, Loss=0.9646 Acc=0.7200: 100%|██████████| 100/100 [00:18<00:00,  5.39it/s]
+Epoch 1, Val, Loss=1.5426 Acc=0.3410
+Epoch 2, Loss=0.8057 Acc=0.8133: 100%|██████████| 100/100 [00:33<00:00,  3.03it/s]
+Epoch 2, Val, Loss=1.5354 Acc=0.3394
+Epoch 3, Loss=1.0535 Acc=0.5733: 100%|██████████| 100/100 [00:33<00:00,  3.03it/s]
+Epoch 3, Val, Loss=1.5476 Acc=0.3430
+Epoch 4, Loss=1.0076 Acc=0.6533: 100%|██████████| 100/100 [00:33<00:00,  3.00it/s]
+Epoch 4, Val, Loss=1.5425 Acc=0.3456
+Epoch 5, Loss=1.2920 Acc=0.4933: 100%|██████████| 100/100 [00:33<00:00,  3.02it/s]
+Epoch 5, Val, Loss=1.5385 Acc=0.3448
+Epoch 6, Loss=0.6430 Acc=0.8933: 100%|██████████| 100/100 [00:32<00:00,  3.04it/s]
+Epoch 6, Val, Loss=1.5421 Acc=0.3425
+Epoch 7, Loss=0.7319 Acc=0.8400: 100%|██████████| 100/100 [00:33<00:00,  2.95it/s]
+Epoch 7, Val, Loss=1.5430 Acc=0.3429
+Epoch 8, Loss=0.7462 Acc=0.8133: 100%|██████████| 100/100 [00:33<00:00,  3.00it/s]
+Epoch 8, Val, Loss=1.5520 Acc=0.3459
+Epoch 9, Loss=0.9192 Acc=0.6933: 100%|██████████| 100/100 [00:32<00:00,  3.04it/s]
+Epoch 9, Val, Loss=1.5525 Acc=0.3391
+Epoch 10, Loss=0.5474 Acc=0.9200: 100%|██████████| 100/100 [00:33<00:00,  3.01it/s]
+Best Epoch 8, Best Val Acc=0.3459
+Epoch 10, Val, Loss=1.5414 Acc=0.3482
+Running Time: 17m, Estimated Time: 17m
+{'base_lr': 0.01,
+ 'dataset': 'MiniImageNet',
+ 'dataset_dir': './data/mini/',
+ 'eval_weights': None,
+ 'gamma': 0.5,
+ 'gpu': '1',
+ 'init_weights': None,
+ 'max_epoch': 10,
+ 'meta_label': 'exp1',
+ 'meta_lr1': 0.0001,
+ 'meta_lr2': 0.001,
+ 'model_type': 'ResNet',
+ 'num_batch': 100,
+ 'phase': 'meta_eval',
+ 'pre_batch_size': 128,
+ 'pre_custom_momentum': 0.9,
+ 'pre_custom_weight_decay': 0.0005,
+ 'pre_gamma': 0.2,
+ 'pre_lr': 0.1,
+ 'pre_max_epoch': 100,
+ 'pre_step_size': 30,
+ 'seed': 0,
+ 'shot': 1,
+ 'step_size': 10,
+ 'train_query': 15,
+ 'update_step': 100,
+ 'val_query': 15,
+ 'way': 5}
+Using gpu: 1
+Using random seed.
+dict_keys(['encoder.conv1.weight', 'encoder.conv1.bias', 'encoder.bn1.weight', 'encoder.bn1.bias', 'encoder.bn1.running_mean', 'encoder.bn1.running_var', 'encoder.bn1.num_batches_tracked', 'encoder.layer1.0.conv1.weight', 'encoder.layer1.0.bn1.weight', 'encoder.layer1.0.bn1.bias', 'encoder.layer1.0.bn1.running_mean', 'encoder.layer1.0.bn1.running_var', 'encoder.layer1.0.bn1.num_batches_tracked', 'encoder.layer1.0.conv2.weight', 'encoder.layer1.0.bn2.weight', 'encoder.layer1.0.bn2.bias', 'encoder.layer1.0.bn2.running_mean', 'encoder.layer1.0.bn2.running_var', 'encoder.layer1.0.bn2.num_batches_tracked', 'encoder.layer1.0.downsample.0.weight', 'encoder.layer1.0.downsample.1.weight', 'encoder.layer1.0.downsample.1.bias', 'encoder.layer1.0.downsample.1.running_mean', 'encoder.layer1.0.downsample.1.running_var', 'encoder.layer1.0.downsample.1.num_batches_tracked', 'encoder.layer1.1.conv1.weight', 'encoder.layer1.1.bn1.weight', 'encoder.layer1.1.bn1.bias', 'encoder.layer1.1.bn1.running_mean', 'encoder.layer1.1.bn1.running_var', 'encoder.layer1.1.bn1.num_batches_tracked', 'encoder.layer1.1.conv2.weight', 'encoder.layer1.1.bn2.weight', 'encoder.layer1.1.bn2.bias', 'encoder.layer1.1.bn2.running_mean', 'encoder.layer1.1.bn2.running_var', 'encoder.layer1.1.bn2.num_batches_tracked', 'encoder.layer1.2.conv1.weight', 'encoder.layer1.2.bn1.weight', 'encoder.layer1.2.bn1.bias', 'encoder.layer1.2.bn1.running_mean', 'encoder.layer1.2.bn1.running_var', 'encoder.layer1.2.bn1.num_batches_tracked', 'encoder.layer1.2.conv2.weight', 'encoder.layer1.2.bn2.weight', 'encoder.layer1.2.bn2.bias', 'encoder.layer1.2.bn2.running_mean', 'encoder.layer1.2.bn2.running_var', 'encoder.layer1.2.bn2.num_batches_tracked', 'encoder.layer1.3.conv1.weight', 'encoder.layer1.3.bn1.weight', 'encoder.layer1.3.bn1.bias', 'encoder.layer1.3.bn1.running_mean', 'encoder.layer1.3.bn1.running_var', 'encoder.layer1.3.bn1.num_batches_tracked', 'encoder.layer1.3.conv2.weight', 'encoder.layer1.3.bn2.weight', 'encoder.layer1.3.bn2.bias', 'encoder.layer1.3.bn2.running_mean', 'encoder.layer1.3.bn2.running_var', 'encoder.layer1.3.bn2.num_batches_tracked', 'encoder.layer2.0.conv1.weight', 'encoder.layer2.0.bn1.weight', 'encoder.layer2.0.bn1.bias', 'encoder.layer2.0.bn1.running_mean', 'encoder.layer2.0.bn1.running_var', 'encoder.layer2.0.bn1.num_batches_tracked', 'encoder.layer2.0.conv2.weight', 'encoder.layer2.0.bn2.weight', 'encoder.layer2.0.bn2.bias', 'encoder.layer2.0.bn2.running_mean', 'encoder.layer2.0.bn2.running_var', 'encoder.layer2.0.bn2.num_batches_tracked', 'encoder.layer2.0.downsample.0.weight', 'encoder.layer2.0.downsample.1.weight', 'encoder.layer2.0.downsample.1.bias', 'encoder.layer2.0.downsample.1.running_mean', 'encoder.layer2.0.downsample.1.running_var', 'encoder.layer2.0.downsample.1.num_batches_tracked', 'encoder.layer2.1.conv1.weight', 'encoder.layer2.1.bn1.weight', 'encoder.layer2.1.bn1.bias', 'encoder.layer2.1.bn1.running_mean', 'encoder.layer2.1.bn1.running_var', 'encoder.layer2.1.bn1.num_batches_tracked', 'encoder.layer2.1.conv2.weight', 'encoder.layer2.1.bn2.weight', 'encoder.layer2.1.bn2.bias', 'encoder.layer2.1.bn2.running_mean', 'encoder.layer2.1.bn2.running_var', 'encoder.layer2.1.bn2.num_batches_tracked', 'encoder.layer2.2.conv1.weight', 'encoder.layer2.2.bn1.weight', 'encoder.layer2.2.bn1.bias', 'encoder.layer2.2.bn1.running_mean', 'encoder.layer2.2.bn1.running_var', 'encoder.layer2.2.bn1.num_batches_tracked', 'encoder.layer2.2.conv2.weight', 'encoder.layer2.2.bn2.weight', 'encoder.layer2.2.bn2.bias', 'encoder.layer2.2.bn2.running_mean', 'encoder.layer2.2.bn2.running_var', 'encoder.layer2.2.bn2.num_batches_tracked', 'encoder.layer2.3.conv1.weight', 'encoder.layer2.3.bn1.weight', 'encoder.layer2.3.bn1.bias', 'encoder.layer2.3.bn1.running_mean', 'encoder.layer2.3.bn1.running_var', 'encoder.layer2.3.bn1.num_batches_tracked', 'encoder.layer2.3.conv2.weight', 'encoder.layer2.3.bn2.weight', 'encoder.layer2.3.bn2.bias', 'encoder.layer2.3.bn2.running_mean', 'encoder.layer2.3.bn2.running_var', 'encoder.layer2.3.bn2.num_batches_tracked', 'encoder.layer3.0.conv1.weight', 'encoder.layer3.0.bn1.weight', 'encoder.layer3.0.bn1.bias', 'encoder.layer3.0.bn1.running_mean', 'encoder.layer3.0.bn1.running_var', 'encoder.layer3.0.bn1.num_batches_tracked', 'encoder.layer3.0.conv2.weight', 'encoder.layer3.0.bn2.weight', 'encoder.layer3.0.bn2.bias', 'encoder.layer3.0.bn2.running_mean', 'encoder.layer3.0.bn2.running_var', 'encoder.layer3.0.bn2.num_batches_tracked', 'encoder.layer3.0.downsample.0.weight', 'encoder.layer3.0.downsample.1.weight', 'encoder.layer3.0.downsample.1.bias', 'encoder.layer3.0.downsample.1.running_mean', 'encoder.layer3.0.downsample.1.running_var', 'encoder.layer3.0.downsample.1.num_batches_tracked', 'encoder.layer3.1.conv1.weight', 'encoder.layer3.1.bn1.weight', 'encoder.layer3.1.bn1.bias', 'encoder.layer3.1.bn1.running_mean', 'encoder.layer3.1.bn1.running_var', 'encoder.layer3.1.bn1.num_batches_tracked', 'encoder.layer3.1.conv2.weight', 'encoder.layer3.1.bn2.weight', 'encoder.layer3.1.bn2.bias', 'encoder.layer3.1.bn2.running_mean', 'encoder.layer3.1.bn2.running_var', 'encoder.layer3.1.bn2.num_batches_tracked', 'encoder.layer3.2.conv1.weight', 'encoder.layer3.2.bn1.weight', 'encoder.layer3.2.bn1.bias', 'encoder.layer3.2.bn1.running_mean', 'encoder.layer3.2.bn1.running_var', 'encoder.layer3.2.bn1.num_batches_tracked', 'encoder.layer3.2.conv2.weight', 'encoder.layer3.2.bn2.weight', 'encoder.layer3.2.bn2.bias', 'encoder.layer3.2.bn2.running_mean', 'encoder.layer3.2.bn2.running_var', 'encoder.layer3.2.bn2.num_batches_tracked', 'encoder.layer3.3.conv1.weight', 'encoder.layer3.3.bn1.weight', 'encoder.layer3.3.bn1.bias', 'encoder.layer3.3.bn1.running_mean', 'encoder.layer3.3.bn1.running_var', 'encoder.layer3.3.bn1.num_batches_tracked', 'encoder.layer3.3.conv2.weight', 'encoder.layer3.3.bn2.weight', 'encoder.layer3.3.bn2.bias', 'encoder.layer3.3.bn2.running_mean', 'encoder.layer3.3.bn2.running_var', 'encoder.layer3.3.bn2.num_batches_tracked'])
+batch 100: 38.53(34.67)
+batch 200: 38.00(50.67)
+batch 300: 37.77(22.67)
+batch 400: 37.63(32.00)
+batch 500: 37.45(32.00)
+batch 600: 37.41(42.67)
+Val Best Epoch 10, Acc 0.3482, Test Acc 0.3741
+Test Acc 0.3741 + 0.0073
+{'base_lr': 0.01,
+ 'dataset': 'MiniImageNet',
+ 'dataset_dir': './data/mini/',
+ 'eval_weights': None,
+ 'gamma': 0.5,
+ 'gpu': '1',
+ 'init_weights': None,
+ 'max_epoch': 10,
+ 'meta_label': 'exp1',
+ 'meta_lr1': 0.0001,
+ 'meta_lr2': 0.001,
+ 'model_type': 'ResNet',
+ 'num_batch': 100,
+ 'phase': 'meta_train',
+ 'pre_batch_size': 128,
+ 'pre_custom_momentum': 0.9,
+ 'pre_custom_weight_decay': 0.0005,
+ 'pre_gamma': 0.2,
+ 'pre_lr': 0.1,
+ 'pre_max_epoch': 100,
+ 'pre_step_size': 30,
+ 'seed': 0,
+ 'shot': 5,
+ 'step_size': 10,
+ 'train_query': 15,
+ 'update_step': 100,
+ 'val_query': 15,
+ 'way': 5}
+Using gpu: 1
+Using random seed.
+dict_keys(['encoder.conv1.weight', 'encoder.conv1.bias', 'encoder.bn1.weight', 'encoder.bn1.bias', 'encoder.bn1.running_mean', 'encoder.bn1.running_var', 'encoder.bn1.num_batches_tracked', 'encoder.layer1.0.conv1.weight', 'encoder.layer1.0.bn1.weight', 'encoder.layer1.0.bn1.bias', 'encoder.layer1.0.bn1.running_mean', 'encoder.layer1.0.bn1.running_var', 'encoder.layer1.0.bn1.num_batches_tracked', 'encoder.layer1.0.conv2.weight', 'encoder.layer1.0.bn2.weight', 'encoder.layer1.0.bn2.bias', 'encoder.layer1.0.bn2.running_mean', 'encoder.layer1.0.bn2.running_var', 'encoder.layer1.0.bn2.num_batches_tracked', 'encoder.layer1.0.downsample.0.weight', 'encoder.layer1.0.downsample.1.weight', 'encoder.layer1.0.downsample.1.bias', 'encoder.layer1.0.downsample.1.running_mean', 'encoder.layer1.0.downsample.1.running_var', 'encoder.layer1.0.downsample.1.num_batches_tracked', 'encoder.layer1.1.conv1.weight', 'encoder.layer1.1.bn1.weight', 'encoder.layer1.1.bn1.bias', 'encoder.layer1.1.bn1.running_mean', 'encoder.layer1.1.bn1.running_var', 'encoder.layer1.1.bn1.num_batches_tracked', 'encoder.layer1.1.conv2.weight', 'encoder.layer1.1.bn2.weight', 'encoder.layer1.1.bn2.bias', 'encoder.layer1.1.bn2.running_mean', 'encoder.layer1.1.bn2.running_var', 'encoder.layer1.1.bn2.num_batches_tracked', 'encoder.layer1.2.conv1.weight', 'encoder.layer1.2.bn1.weight', 'encoder.layer1.2.bn1.bias', 'encoder.layer1.2.bn1.running_mean', 'encoder.layer1.2.bn1.running_var', 'encoder.layer1.2.bn1.num_batches_tracked', 'encoder.layer1.2.conv2.weight', 'encoder.layer1.2.bn2.weight', 'encoder.layer1.2.bn2.bias', 'encoder.layer1.2.bn2.running_mean', 'encoder.layer1.2.bn2.running_var', 'encoder.layer1.2.bn2.num_batches_tracked', 'encoder.layer1.3.conv1.weight', 'encoder.layer1.3.bn1.weight', 'encoder.layer1.3.bn1.bias', 'encoder.layer1.3.bn1.running_mean', 'encoder.layer1.3.bn1.running_var', 'encoder.layer1.3.bn1.num_batches_tracked', 'encoder.layer1.3.conv2.weight', 'encoder.layer1.3.bn2.weight', 'encoder.layer1.3.bn2.bias', 'encoder.layer1.3.bn2.running_mean', 'encoder.layer1.3.bn2.running_var', 'encoder.layer1.3.bn2.num_batches_tracked', 'encoder.layer2.0.conv1.weight', 'encoder.layer2.0.bn1.weight', 'encoder.layer2.0.bn1.bias', 'encoder.layer2.0.bn1.running_mean', 'encoder.layer2.0.bn1.running_var', 'encoder.layer2.0.bn1.num_batches_tracked', 'encoder.layer2.0.conv2.weight', 'encoder.layer2.0.bn2.weight', 'encoder.layer2.0.bn2.bias', 'encoder.layer2.0.bn2.running_mean', 'encoder.layer2.0.bn2.running_var', 'encoder.layer2.0.bn2.num_batches_tracked', 'encoder.layer2.0.downsample.0.weight', 'encoder.layer2.0.downsample.1.weight', 'encoder.layer2.0.downsample.1.bias', 'encoder.layer2.0.downsample.1.running_mean', 'encoder.layer2.0.downsample.1.running_var', 'encoder.layer2.0.downsample.1.num_batches_tracked', 'encoder.layer2.1.conv1.weight', 'encoder.layer2.1.bn1.weight', 'encoder.layer2.1.bn1.bias', 'encoder.layer2.1.bn1.running_mean', 'encoder.layer2.1.bn1.running_var', 'encoder.layer2.1.bn1.num_batches_tracked', 'encoder.layer2.1.conv2.weight', 'encoder.layer2.1.bn2.weight', 'encoder.layer2.1.bn2.bias', 'encoder.layer2.1.bn2.running_mean', 'encoder.layer2.1.bn2.running_var', 'encoder.layer2.1.bn2.num_batches_tracked', 'encoder.layer2.2.conv1.weight', 'encoder.layer2.2.bn1.weight', 'encoder.layer2.2.bn1.bias', 'encoder.layer2.2.bn1.running_mean', 'encoder.layer2.2.bn1.running_var', 'encoder.layer2.2.bn1.num_batches_tracked', 'encoder.layer2.2.conv2.weight', 'encoder.layer2.2.bn2.weight', 'encoder.layer2.2.bn2.bias', 'encoder.layer2.2.bn2.running_mean', 'encoder.layer2.2.bn2.running_var', 'encoder.layer2.2.bn2.num_batches_tracked', 'encoder.layer2.3.conv1.weight', 'encoder.layer2.3.bn1.weight', 'encoder.layer2.3.bn1.bias', 'encoder.layer2.3.bn1.running_mean', 'encoder.layer2.3.bn1.running_var', 'encoder.layer2.3.bn1.num_batches_tracked', 'encoder.layer2.3.conv2.weight', 'encoder.layer2.3.bn2.weight', 'encoder.layer2.3.bn2.bias', 'encoder.layer2.3.bn2.running_mean', 'encoder.layer2.3.bn2.running_var', 'encoder.layer2.3.bn2.num_batches_tracked', 'encoder.layer3.0.conv1.weight', 'encoder.layer3.0.bn1.weight', 'encoder.layer3.0.bn1.bias', 'encoder.layer3.0.bn1.running_mean', 'encoder.layer3.0.bn1.running_var', 'encoder.layer3.0.bn1.num_batches_tracked', 'encoder.layer3.0.conv2.weight', 'encoder.layer3.0.bn2.weight', 'encoder.layer3.0.bn2.bias', 'encoder.layer3.0.bn2.running_mean', 'encoder.layer3.0.bn2.running_var', 'encoder.layer3.0.bn2.num_batches_tracked', 'encoder.layer3.0.downsample.0.weight', 'encoder.layer3.0.downsample.1.weight', 'encoder.layer3.0.downsample.1.bias', 'encoder.layer3.0.downsample.1.running_mean', 'encoder.layer3.0.downsample.1.running_var', 'encoder.layer3.0.downsample.1.num_batches_tracked', 'encoder.layer3.1.conv1.weight', 'encoder.layer3.1.bn1.weight', 'encoder.layer3.1.bn1.bias', 'encoder.layer3.1.bn1.running_mean', 'encoder.layer3.1.bn1.running_var', 'encoder.layer3.1.bn1.num_batches_tracked', 'encoder.layer3.1.conv2.weight', 'encoder.layer3.1.bn2.weight', 'encoder.layer3.1.bn2.bias', 'encoder.layer3.1.bn2.running_mean', 'encoder.layer3.1.bn2.running_var', 'encoder.layer3.1.bn2.num_batches_tracked', 'encoder.layer3.2.conv1.weight', 'encoder.layer3.2.bn1.weight', 'encoder.layer3.2.bn1.bias', 'encoder.layer3.2.bn1.running_mean', 'encoder.layer3.2.bn1.running_var', 'encoder.layer3.2.bn1.num_batches_tracked', 'encoder.layer3.2.conv2.weight', 'encoder.layer3.2.bn2.weight', 'encoder.layer3.2.bn2.bias', 'encoder.layer3.2.bn2.running_mean', 'encoder.layer3.2.bn2.running_var', 'encoder.layer3.2.bn2.num_batches_tracked', 'encoder.layer3.3.conv1.weight', 'encoder.layer3.3.bn1.weight', 'encoder.layer3.3.bn1.bias', 'encoder.layer3.3.bn1.running_mean', 'encoder.layer3.3.bn1.running_var', 'encoder.layer3.3.bn1.num_batches_tracked', 'encoder.layer3.3.conv2.weight', 'encoder.layer3.3.bn2.weight', 'encoder.layer3.3.bn2.bias', 'encoder.layer3.3.bn2.running_mean', 'encoder.layer3.3.bn2.running_var', 'encoder.layer3.3.bn2.num_batches_tracked'])
+/home/ty/anaconda3/envs/py37/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:136: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+Epoch 1, Loss=0.9534 Acc=0.7600: 100%|██████████| 100/100 [00:41<00:00,  2.43it/s]
+Epoch 1, Val, Loss=1.3606 Acc=0.4422
+Epoch 2, Loss=0.4829 Acc=0.9733: 100%|██████████| 100/100 [00:36<00:00,  2.75it/s]
+Epoch 2, Val, Loss=1.3241 Acc=0.4614
+Epoch 3, Loss=0.5442 Acc=0.9200: 100%|██████████| 100/100 [00:35<00:00,  2.80it/s]
+Epoch 3, Val, Loss=1.3210 Acc=0.4576
+Epoch 4, Loss=0.5885 Acc=0.9333: 100%|██████████| 100/100 [00:36<00:00,  2.74it/s]
+Epoch 4, Val, Loss=1.3169 Acc=0.4639
+Epoch 5, Loss=0.4365 Acc=0.9600: 100%|██████████| 100/100 [00:36<00:00,  2.73it/s]
+Epoch 5, Val, Loss=1.3226 Acc=0.4591
+Epoch 6, Loss=0.4959 Acc=0.9333: 100%|██████████| 100/100 [00:36<00:00,  2.77it/s]
+Epoch 6, Val, Loss=1.3175 Acc=0.4613
+Epoch 7, Loss=0.4388 Acc=0.9200: 100%|██████████| 100/100 [00:36<00:00,  2.75it/s]
+Epoch 7, Val, Loss=1.3091 Acc=0.4626
+Epoch 8, Loss=0.3057 Acc=0.9867: 100%|██████████| 100/100 [00:36<00:00,  2.72it/s]
+Epoch 8, Val, Loss=1.3227 Acc=0.4511
+Epoch 9, Loss=0.6531 Acc=0.8000: 100%|██████████| 100/100 [00:36<00:00,  2.77it/s]
+Epoch 9, Val, Loss=1.3053 Acc=0.4641
+Epoch 10, Loss=0.5751 Acc=0.8133: 100%|██████████| 100/100 [00:37<00:00,  2.63it/s]
+Best Epoch 9, Best Val Acc=0.4641
+Epoch 10, Val, Loss=1.3070 Acc=0.4592
+Running Time: 20m, Estimated Time: 20m
+{'base_lr': 0.01,
+ 'dataset': 'MiniImageNet',
+ 'dataset_dir': './data/mini/',
+ 'eval_weights': None,
+ 'gamma': 0.5,
+ 'gpu': '1',
+ 'init_weights': None,
+ 'max_epoch': 10,
+ 'meta_label': 'exp1',
+ 'meta_lr1': 0.0001,
+ 'meta_lr2': 0.001,
+ 'model_type': 'ResNet',
+ 'num_batch': 100,
+ 'phase': 'meta_eval',
+ 'pre_batch_size': 128,
+ 'pre_custom_momentum': 0.9,
+ 'pre_custom_weight_decay': 0.0005,
+ 'pre_gamma': 0.2,
+ 'pre_lr': 0.1,
+ 'pre_max_epoch': 100,
+ 'pre_step_size': 30,
+ 'seed': 0,
+ 'shot': 5,
+ 'step_size': 10,
+ 'train_query': 15,
+ 'update_step': 100,
+ 'val_query': 15,
+ 'way': 5}
+Using gpu: 1
+Using random seed.
+dict_keys(['encoder.conv1.weight', 'encoder.conv1.bias', 'encoder.bn1.weight', 'encoder.bn1.bias', 'encoder.bn1.running_mean', 'encoder.bn1.running_var', 'encoder.bn1.num_batches_tracked', 'encoder.layer1.0.conv1.weight', 'encoder.layer1.0.bn1.weight', 'encoder.layer1.0.bn1.bias', 'encoder.layer1.0.bn1.running_mean', 'encoder.layer1.0.bn1.running_var', 'encoder.layer1.0.bn1.num_batches_tracked', 'encoder.layer1.0.conv2.weight', 'encoder.layer1.0.bn2.weight', 'encoder.layer1.0.bn2.bias', 'encoder.layer1.0.bn2.running_mean', 'encoder.layer1.0.bn2.running_var', 'encoder.layer1.0.bn2.num_batches_tracked', 'encoder.layer1.0.downsample.0.weight', 'encoder.layer1.0.downsample.1.weight', 'encoder.layer1.0.downsample.1.bias', 'encoder.layer1.0.downsample.1.running_mean', 'encoder.layer1.0.downsample.1.running_var', 'encoder.layer1.0.downsample.1.num_batches_tracked', 'encoder.layer1.1.conv1.weight', 'encoder.layer1.1.bn1.weight', 'encoder.layer1.1.bn1.bias', 'encoder.layer1.1.bn1.running_mean', 'encoder.layer1.1.bn1.running_var', 'encoder.layer1.1.bn1.num_batches_tracked', 'encoder.layer1.1.conv2.weight', 'encoder.layer1.1.bn2.weight', 'encoder.layer1.1.bn2.bias', 'encoder.layer1.1.bn2.running_mean', 'encoder.layer1.1.bn2.running_var', 'encoder.layer1.1.bn2.num_batches_tracked', 'encoder.layer1.2.conv1.weight', 'encoder.layer1.2.bn1.weight', 'encoder.layer1.2.bn1.bias', 'encoder.layer1.2.bn1.running_mean', 'encoder.layer1.2.bn1.running_var', 'encoder.layer1.2.bn1.num_batches_tracked', 'encoder.layer1.2.conv2.weight', 'encoder.layer1.2.bn2.weight', 'encoder.layer1.2.bn2.bias', 'encoder.layer1.2.bn2.running_mean', 'encoder.layer1.2.bn2.running_var', 'encoder.layer1.2.bn2.num_batches_tracked', 'encoder.layer1.3.conv1.weight', 'encoder.layer1.3.bn1.weight', 'encoder.layer1.3.bn1.bias', 'encoder.layer1.3.bn1.running_mean', 'encoder.layer1.3.bn1.running_var', 'encoder.layer1.3.bn1.num_batches_tracked', 'encoder.layer1.3.conv2.weight', 'encoder.layer1.3.bn2.weight', 'encoder.layer1.3.bn2.bias', 'encoder.layer1.3.bn2.running_mean', 'encoder.layer1.3.bn2.running_var', 'encoder.layer1.3.bn2.num_batches_tracked', 'encoder.layer2.0.conv1.weight', 'encoder.layer2.0.bn1.weight', 'encoder.layer2.0.bn1.bias', 'encoder.layer2.0.bn1.running_mean', 'encoder.layer2.0.bn1.running_var', 'encoder.layer2.0.bn1.num_batches_tracked', 'encoder.layer2.0.conv2.weight', 'encoder.layer2.0.bn2.weight', 'encoder.layer2.0.bn2.bias', 'encoder.layer2.0.bn2.running_mean', 'encoder.layer2.0.bn2.running_var', 'encoder.layer2.0.bn2.num_batches_tracked', 'encoder.layer2.0.downsample.0.weight', 'encoder.layer2.0.downsample.1.weight', 'encoder.layer2.0.downsample.1.bias', 'encoder.layer2.0.downsample.1.running_mean', 'encoder.layer2.0.downsample.1.running_var', 'encoder.layer2.0.downsample.1.num_batches_tracked', 'encoder.layer2.1.conv1.weight', 'encoder.layer2.1.bn1.weight', 'encoder.layer2.1.bn1.bias', 'encoder.layer2.1.bn1.running_mean', 'encoder.layer2.1.bn1.running_var', 'encoder.layer2.1.bn1.num_batches_tracked', 'encoder.layer2.1.conv2.weight', 'encoder.layer2.1.bn2.weight', 'encoder.layer2.1.bn2.bias', 'encoder.layer2.1.bn2.running_mean', 'encoder.layer2.1.bn2.running_var', 'encoder.layer2.1.bn2.num_batches_tracked', 'encoder.layer2.2.conv1.weight', 'encoder.layer2.2.bn1.weight', 'encoder.layer2.2.bn1.bias', 'encoder.layer2.2.bn1.running_mean', 'encoder.layer2.2.bn1.running_var', 'encoder.layer2.2.bn1.num_batches_tracked', 'encoder.layer2.2.conv2.weight', 'encoder.layer2.2.bn2.weight', 'encoder.layer2.2.bn2.bias', 'encoder.layer2.2.bn2.running_mean', 'encoder.layer2.2.bn2.running_var', 'encoder.layer2.2.bn2.num_batches_tracked', 'encoder.layer2.3.conv1.weight', 'encoder.layer2.3.bn1.weight', 'encoder.layer2.3.bn1.bias', 'encoder.layer2.3.bn1.running_mean', 'encoder.layer2.3.bn1.running_var', 'encoder.layer2.3.bn1.num_batches_tracked', 'encoder.layer2.3.conv2.weight', 'encoder.layer2.3.bn2.weight', 'encoder.layer2.3.bn2.bias', 'encoder.layer2.3.bn2.running_mean', 'encoder.layer2.3.bn2.running_var', 'encoder.layer2.3.bn2.num_batches_tracked', 'encoder.layer3.0.conv1.weight', 'encoder.layer3.0.bn1.weight', 'encoder.layer3.0.bn1.bias', 'encoder.layer3.0.bn1.running_mean', 'encoder.layer3.0.bn1.running_var', 'encoder.layer3.0.bn1.num_batches_tracked', 'encoder.layer3.0.conv2.weight', 'encoder.layer3.0.bn2.weight', 'encoder.layer3.0.bn2.bias', 'encoder.layer3.0.bn2.running_mean', 'encoder.layer3.0.bn2.running_var', 'encoder.layer3.0.bn2.num_batches_tracked', 'encoder.layer3.0.downsample.0.weight', 'encoder.layer3.0.downsample.1.weight', 'encoder.layer3.0.downsample.1.bias', 'encoder.layer3.0.downsample.1.running_mean', 'encoder.layer3.0.downsample.1.running_var', 'encoder.layer3.0.downsample.1.num_batches_tracked', 'encoder.layer3.1.conv1.weight', 'encoder.layer3.1.bn1.weight', 'encoder.layer3.1.bn1.bias', 'encoder.layer3.1.bn1.running_mean', 'encoder.layer3.1.bn1.running_var', 'encoder.layer3.1.bn1.num_batches_tracked', 'encoder.layer3.1.conv2.weight', 'encoder.layer3.1.bn2.weight', 'encoder.layer3.1.bn2.bias', 'encoder.layer3.1.bn2.running_mean', 'encoder.layer3.1.bn2.running_var', 'encoder.layer3.1.bn2.num_batches_tracked', 'encoder.layer3.2.conv1.weight', 'encoder.layer3.2.bn1.weight', 'encoder.layer3.2.bn1.bias', 'encoder.layer3.2.bn1.running_mean', 'encoder.layer3.2.bn1.running_var', 'encoder.layer3.2.bn1.num_batches_tracked', 'encoder.layer3.2.conv2.weight', 'encoder.layer3.2.bn2.weight', 'encoder.layer3.2.bn2.bias', 'encoder.layer3.2.bn2.running_mean', 'encoder.layer3.2.bn2.running_var', 'encoder.layer3.2.bn2.num_batches_tracked', 'encoder.layer3.3.conv1.weight', 'encoder.layer3.3.bn1.weight', 'encoder.layer3.3.bn1.bias', 'encoder.layer3.3.bn1.running_mean', 'encoder.layer3.3.bn1.running_var', 'encoder.layer3.3.bn1.num_batches_tracked', 'encoder.layer3.3.conv2.weight', 'encoder.layer3.3.bn2.weight', 'encoder.layer3.3.bn2.bias', 'encoder.layer3.3.bn2.running_mean', 'encoder.layer3.3.bn2.running_var', 'encoder.layer3.3.bn2.num_batches_tracked'])
+batch 100: 49.43(46.67)
+batch 200: 50.21(49.33)
+batch 300: 50.77(50.67)
+batch 400: 50.74(58.67)
+batch 500: 50.68(29.33)
+batch 600: 50.47(45.33)
+Val Best Epoch 9, Acc 0.4641, Test Acc 0.5047
+Test Acc 0.5047 + 0.0070
+
+Process finished with exit code 0
