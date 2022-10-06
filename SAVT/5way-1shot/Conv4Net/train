@@ -1,0 +1,652 @@
+/home/ty/anaconda3/envs/py37/bin/python /home/ty/文档/4/conv4/FEAT-master(2)/train_fsl.py
+{'augment': False,
+ 'backbone_class': 'ConvNet',
+ 'balance': 1,
+ 'dataset': 'MiniImageNet',
+ 'episodes_per_epoch': 100,
+ 'eval_interval': 1,
+ 'eval_query': 15,
+ 'eval_shot': 1,
+ 'eval_way': 5,
+ 'fix_BN': False,
+ 'gamma': 0.5,
+ 'gpu': '0',
+ 'init_weights': '/home/ty/文档/4/conv4/FEAT-master(2)/saves/initialization/miniimagenet/con-pre.pth',
+ 'log_interval': 5,
+ 'lr': 0.0001,
+ 'lr_mul': 10,
+ 'lr_scheduler': 'step',
+ 'max_epoch': 200,
+ 'model_class': 'FEAT',
+ 'mom': 0.9,
+ 'multi_gpu': False,
+ 'num_classes': 5,
+ 'num_eval_episodes': 600,
+ 'num_workers': 8,
+ 'orig_imsize': -1,
+ 'query': 15,
+ 'save_dir': '/home/ty/文档/4/conv4/FEAT-master(2)/checkpoints',
+ 'save_path': '/home/ty/文档/4/conv4/FEAT-master(2)/checkpoints/MiniImageNet-FEAT-ConvNet-05w01s15q-Pre-DIS/20_0.5_lr0.0001mul10_step_T144T26_b1_bsz080-NoAug',
+ 'shot': 1,
+ 'step_size': '20',
+ 'temperature': 44,
+ 'temperature2': 6,
+ 'use_euclidean': True,
+ 'way': 5,
+ 'weight_decay': 0.0005}
+using gpu: 0
+100%|█| 8469/8469 [00:00<00:00, 227444.25it/
+100%|█| 803/803 [00:00<00:00, 290422.19it/s]
+100%|█| 2251/2251 [00:00<00:00, 207731.10it/
+dict_keys(['encoder.encoder.0.0.weight', 'encoder.encoder.0.0.bias', 'encoder.encoder.0.1.weight', 'encoder.encoder.0.1.bias', 'encoder.encoder.0.1.running_mean', 'encoder.encoder.0.1.running_var', 'encoder.encoder.1.0.weight', 'encoder.encoder.1.0.bias', 'encoder.encoder.1.1.weight', 'encoder.encoder.1.1.bias', 'encoder.encoder.1.1.running_mean', 'encoder.encoder.1.1.running_var', 'encoder.encoder.2.0.weight', 'encoder.encoder.2.0.bias', 'encoder.encoder.2.1.weight', 'encoder.encoder.2.1.bias', 'encoder.encoder.2.1.running_mean', 'encoder.encoder.2.1.running_var', 'encoder.encoder.3.0.weight', 'encoder.encoder.3.0.bias', 'encoder.encoder.3.1.weight', 'encoder.encoder.3.1.bias', 'encoder.encoder.3.1.running_mean', 'encoder.encoder.3.1.running_var'])
+/home/ty/文档/4/conv4/FEAT-master(2)/model/networks/att.py:63: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  ga = F.softmax(ga)
+best epoch 0, best val acc=0.0000 + 0.0000
+epoch 1, val, loss=1.5858 acc=0.2894+0.0050
+ETA:31s/1.7h
+best epoch 1, best val acc=0.2894 + 0.0050
+epoch 2, val, loss=1.5898 acc=0.2895+0.0053
+ETA:1m/1.7h
+best epoch 2, best val acc=0.2895 + 0.0053
+epoch 3, val, loss=1.5913 acc=0.2922+0.0051
+ETA:2m/1.7h
+best epoch 3, best val acc=0.2922 + 0.0051
+epoch 4, val, loss=1.5942 acc=0.2938+0.0050
+ETA:2m/1.7h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 5, val, loss=1.6023 acc=0.2886+0.0048
+ETA:3m/1.7h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 6, val, loss=1.6186 acc=0.2820+0.0048
+ETA:3m/1.7h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 7, val, loss=1.6051 acc=0.2862+0.0051
+ETA:4m/1.8h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 8, val, loss=1.6120 acc=0.2825+0.0051
+ETA:4m/1.8h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 9, val, loss=1.6111 acc=0.2911+0.0049
+ETA:5m/1.8h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 10, val, loss=1.6090 acc=0.2894+0.0050
+ETA:5m/1.8h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 11, val, loss=1.6156 acc=0.2895+0.0053
+ETA:6m/1.7h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 12, val, loss=1.6283 acc=0.2894+0.0050
+ETA:6m/1.8h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 13, val, loss=1.6232 acc=0.2901+0.0054
+ETA:7m/1.8h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 14, val, loss=1.6422 acc=0.2899+0.0049
+ETA:8m/1.9h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 15, val, loss=1.6486 acc=0.2827+0.0049
+ETA:9m/1.9h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 16, val, loss=1.6284 acc=0.2892+0.0049
+ETA:9m/2.0h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 17, val, loss=1.6357 acc=0.2916+0.0050
+ETA:10m/2.0h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 18, val, loss=1.6402 acc=0.2864+0.0050
+ETA:11m/2.0h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 19, val, loss=1.6493 acc=0.2840+0.0051
+ETA:12m/2.0h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 20, val, loss=1.6412 acc=0.2890+0.0051
+ETA:13m/2.1h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 21, val, loss=1.6518 acc=0.2890+0.0053
+ETA:13m/2.1h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 22, val, loss=1.6691 acc=0.2894+0.0053
+ETA:14m/2.2h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 23, val, loss=1.6568 acc=0.2902+0.0051
+ETA:15m/2.2h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 24, val, loss=1.6670 acc=0.2883+0.0052
+ETA:16m/2.3h
+best epoch 4, best val acc=0.2938 + 0.0050
+epoch 25, val, loss=1.6391 acc=0.2955+0.0050
+ETA:17m/2.3h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 26, val, loss=1.6476 acc=0.2928+0.0049
+ETA:18m/2.3h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 27, val, loss=1.6546 acc=0.2920+0.0053
+ETA:19m/2.4h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 28, val, loss=1.6305 acc=0.2950+0.0052
+ETA:20m/2.4h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 29, val, loss=1.6691 acc=0.2878+0.0050
+ETA:21m/2.4h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 30, val, loss=1.6670 acc=0.2918+0.0049
+ETA:22m/2.4h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 31, val, loss=1.6932 acc=0.2831+0.0049
+ETA:23m/2.4h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 32, val, loss=1.6443 acc=0.2951+0.0048
+ETA:24m/2.5h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 33, val, loss=1.6719 acc=0.2868+0.0051
+ETA:25m/2.5h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 34, val, loss=1.6923 acc=0.2824+0.0048
+ETA:25m/2.5h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 35, val, loss=1.6679 acc=0.2897+0.0049
+ETA:26m/2.5h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 36, val, loss=1.6580 acc=0.2931+0.0050
+ETA:27m/2.5h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 37, val, loss=1.7008 acc=0.2866+0.0050
+ETA:28m/2.5h
+best epoch 25, best val acc=0.2955 + 0.0050
+epoch 38, val, loss=1.6409 acc=0.3000+0.0050
+ETA:29m/2.5h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 39, val, loss=1.7198 acc=0.2850+0.0047
+ETA:30m/2.6h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 40, val, loss=1.6956 acc=0.2913+0.0049
+ETA:31m/2.6h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 41, val, loss=1.7045 acc=0.2899+0.0053
+ETA:32m/2.6h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 42, val, loss=1.6966 acc=0.2904+0.0051
+ETA:33m/2.6h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 43, val, loss=1.6855 acc=0.2877+0.0052
+ETA:34m/2.6h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 44, val, loss=1.6905 acc=0.2879+0.0050
+ETA:35m/2.6h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 45, val, loss=1.6883 acc=0.2919+0.0048
+ETA:35m/2.6h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 46, val, loss=1.7034 acc=0.2852+0.0048
+ETA:36m/2.6h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 47, val, loss=1.7007 acc=0.2890+0.0046
+ETA:37m/2.6h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 48, val, loss=1.6984 acc=0.2912+0.0049
+ETA:38m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 49, val, loss=1.7113 acc=0.2947+0.0047
+ETA:39m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 50, val, loss=1.7310 acc=0.2848+0.0049
+ETA:40m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 51, val, loss=1.7102 acc=0.2889+0.0049
+ETA:41m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 52, val, loss=1.7075 acc=0.2917+0.0049
+ETA:42m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 53, val, loss=1.6689 acc=0.2946+0.0050
+ETA:43m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 54, val, loss=1.6937 acc=0.2929+0.0052
+ETA:44m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 55, val, loss=1.7031 acc=0.2903+0.0050
+ETA:45m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 56, val, loss=1.7074 acc=0.2885+0.0047
+ETA:46m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 57, val, loss=1.7106 acc=0.2883+0.0047
+ETA:46m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 58, val, loss=1.6981 acc=0.2867+0.0052
+ETA:48m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 59, val, loss=1.6916 acc=0.2935+0.0053
+ETA:48m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 60, val, loss=1.6913 acc=0.2949+0.0049
+ETA:49m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 61, val, loss=1.7072 acc=0.2925+0.0048
+ETA:50m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 62, val, loss=1.7090 acc=0.2902+0.0049
+ETA:51m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 63, val, loss=1.6992 acc=0.2910+0.0049
+ETA:52m/2.7h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 64, val, loss=1.7167 acc=0.2865+0.0050
+ETA:53m/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 65, val, loss=1.7267 acc=0.2842+0.0049
+ETA:54m/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 66, val, loss=1.6948 acc=0.2950+0.0052
+ETA:55m/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 67, val, loss=1.7132 acc=0.2932+0.0052
+ETA:56m/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 68, val, loss=1.7161 acc=0.2904+0.0052
+ETA:56m/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 69, val, loss=1.7135 acc=0.2907+0.0049
+ETA:57m/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 70, val, loss=1.7021 acc=0.2927+0.0049
+ETA:58m/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 71, val, loss=1.6996 acc=0.2905+0.0050
+ETA:59m/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 72, val, loss=1.7391 acc=0.2866+0.0048
+ETA:60m/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 73, val, loss=1.7135 acc=0.2867+0.0049
+ETA:1.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 74, val, loss=1.6907 acc=0.2944+0.0050
+ETA:1.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 75, val, loss=1.7114 acc=0.2877+0.0051
+ETA:1.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 76, val, loss=1.7283 acc=0.2879+0.0048
+ETA:1.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 77, val, loss=1.7003 acc=0.2928+0.0050
+ETA:1.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 78, val, loss=1.7112 acc=0.2890+0.0047
+ETA:1.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 79, val, loss=1.7042 acc=0.2911+0.0050
+ETA:1.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 80, val, loss=1.6925 acc=0.2949+0.0050
+ETA:1.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 81, val, loss=1.6944 acc=0.2928+0.0050
+ETA:1.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 82, val, loss=1.7328 acc=0.2895+0.0047
+ETA:1.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 83, val, loss=1.7055 acc=0.2938+0.0049
+ETA:1.2h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 84, val, loss=1.7140 acc=0.2936+0.0053
+ETA:1.2h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 85, val, loss=1.7038 acc=0.2926+0.0050
+ETA:1.2h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 86, val, loss=1.7027 acc=0.2934+0.0049
+ETA:1.2h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 87, val, loss=1.7135 acc=0.2952+0.0049
+ETA:1.2h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 88, val, loss=1.7143 acc=0.2930+0.0046
+ETA:1.2h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 89, val, loss=1.7110 acc=0.2932+0.0048
+ETA:1.2h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 90, val, loss=1.6961 acc=0.2971+0.0049
+ETA:1.3h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 91, val, loss=1.6985 acc=0.2936+0.0051
+ETA:1.3h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 92, val, loss=1.7408 acc=0.2864+0.0048
+ETA:1.3h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 93, val, loss=1.7202 acc=0.2872+0.0049
+ETA:1.3h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 94, val, loss=1.7140 acc=0.2930+0.0048
+ETA:1.3h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 95, val, loss=1.6964 acc=0.2939+0.0051
+ETA:1.3h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 96, val, loss=1.7278 acc=0.2860+0.0049
+ETA:1.3h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 97, val, loss=1.7009 acc=0.2912+0.0049
+ETA:1.4h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 98, val, loss=1.7214 acc=0.2900+0.0048
+ETA:1.4h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 99, val, loss=1.7225 acc=0.2895+0.0050
+ETA:1.4h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 100, val, loss=1.7222 acc=0.2894+0.0048
+ETA:1.4h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 101, val, loss=1.7288 acc=0.2895+0.0050
+ETA:1.4h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 102, val, loss=1.7103 acc=0.2893+0.0050
+ETA:1.4h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 103, val, loss=1.7174 acc=0.2891+0.0048
+ETA:1.4h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 104, val, loss=1.7215 acc=0.2889+0.0049
+ETA:1.5h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 105, val, loss=1.7040 acc=0.2896+0.0051
+ETA:1.5h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 106, val, loss=1.7228 acc=0.2925+0.0050
+ETA:1.5h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 107, val, loss=1.7197 acc=0.2928+0.0051
+ETA:1.5h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 108, val, loss=1.7180 acc=0.2871+0.0052
+ETA:1.5h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 109, val, loss=1.7283 acc=0.2885+0.0052
+ETA:1.5h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 110, val, loss=1.7159 acc=0.2915+0.0050
+ETA:1.5h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 111, val, loss=1.7311 acc=0.2905+0.0051
+ETA:1.6h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 112, val, loss=1.7212 acc=0.2973+0.0049
+ETA:1.6h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 113, val, loss=1.7258 acc=0.2911+0.0049
+ETA:1.6h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 114, val, loss=1.7108 acc=0.2923+0.0050
+ETA:1.6h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 115, val, loss=1.7395 acc=0.2884+0.0049
+ETA:1.6h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 116, val, loss=1.7385 acc=0.2869+0.0049
+ETA:1.6h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 117, val, loss=1.6972 acc=0.2941+0.0049
+ETA:1.7h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 118, val, loss=1.7244 acc=0.2903+0.0050
+ETA:1.7h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 119, val, loss=1.7250 acc=0.2927+0.0048
+ETA:1.7h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 120, val, loss=1.7103 acc=0.2935+0.0051
+ETA:1.7h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 121, val, loss=1.7147 acc=0.2936+0.0051
+ETA:1.7h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 122, val, loss=1.7305 acc=0.2866+0.0050
+ETA:1.7h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 123, val, loss=1.7352 acc=0.2887+0.0049
+ETA:1.7h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 124, val, loss=1.7083 acc=0.2910+0.0050
+ETA:1.8h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 125, val, loss=1.7104 acc=0.2936+0.0049
+ETA:1.8h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 126, val, loss=1.7321 acc=0.2898+0.0050
+ETA:1.8h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 127, val, loss=1.7461 acc=0.2920+0.0051
+ETA:1.8h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 128, val, loss=1.7212 acc=0.2893+0.0049
+ETA:1.8h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 129, val, loss=1.6949 acc=0.2957+0.0051
+ETA:1.8h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 130, val, loss=1.7276 acc=0.2896+0.0052
+ETA:1.8h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 131, val, loss=1.7069 acc=0.2942+0.0052
+ETA:1.9h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 132, val, loss=1.7102 acc=0.2909+0.0050
+ETA:1.9h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 133, val, loss=1.7115 acc=0.2909+0.0048
+ETA:1.9h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 134, val, loss=1.7196 acc=0.2915+0.0052
+ETA:1.9h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 135, val, loss=1.7154 acc=0.2913+0.0051
+ETA:1.9h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 136, val, loss=1.7531 acc=0.2844+0.0052
+ETA:1.9h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 137, val, loss=1.7078 acc=0.2938+0.0049
+ETA:1.9h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 138, val, loss=1.7300 acc=0.2912+0.0048
+ETA:2.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 139, val, loss=1.7280 acc=0.2901+0.0051
+ETA:2.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 140, val, loss=1.7229 acc=0.2862+0.0048
+ETA:2.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 141, val, loss=1.7075 acc=0.2971+0.0050
+ETA:2.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 142, val, loss=1.7429 acc=0.2927+0.0050
+ETA:2.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 143, val, loss=1.7471 acc=0.2857+0.0050
+ETA:2.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 144, val, loss=1.7284 acc=0.2901+0.0052
+ETA:2.0h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 145, val, loss=1.7172 acc=0.2938+0.0050
+ETA:2.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 146, val, loss=1.7368 acc=0.2814+0.0049
+ETA:2.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 147, val, loss=1.7521 acc=0.2836+0.0048
+ETA:2.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 148, val, loss=1.7313 acc=0.2926+0.0049
+ETA:2.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 149, val, loss=1.7087 acc=0.2904+0.0051
+ETA:2.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 150, val, loss=1.7184 acc=0.2929+0.0050
+ETA:2.1h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 151, val, loss=1.7163 acc=0.2960+0.0048
+ETA:2.2h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 152, val, loss=1.7271 acc=0.2957+0.0051
+ETA:2.2h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 153, val, loss=1.7465 acc=0.2907+0.0048
+ETA:2.2h/2.8h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 154, val, loss=1.7057 acc=0.2950+0.0053
+ETA:2.2h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 155, val, loss=1.7531 acc=0.2876+0.0048
+ETA:2.2h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 156, val, loss=1.7127 acc=0.2871+0.0051
+ETA:2.2h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 157, val, loss=1.7072 acc=0.2948+0.0047
+ETA:2.2h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 158, val, loss=1.7217 acc=0.2928+0.0050
+ETA:2.3h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 159, val, loss=1.7296 acc=0.2887+0.0048
+ETA:2.3h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 160, val, loss=1.7131 acc=0.2918+0.0052
+ETA:2.3h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 161, val, loss=1.7320 acc=0.2924+0.0050
+ETA:2.3h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 162, val, loss=1.6963 acc=0.2950+0.0053
+ETA:2.3h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 163, val, loss=1.7118 acc=0.2931+0.0050
+ETA:2.3h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 164, val, loss=1.7198 acc=0.2904+0.0049
+ETA:2.3h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 165, val, loss=1.7361 acc=0.2890+0.0052
+ETA:2.4h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 166, val, loss=1.7347 acc=0.2895+0.0049
+ETA:2.4h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 167, val, loss=1.7119 acc=0.2910+0.0049
+ETA:2.4h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 168, val, loss=1.7337 acc=0.2874+0.0049
+ETA:2.4h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 169, val, loss=1.7395 acc=0.2895+0.0049
+ETA:2.4h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 170, val, loss=1.7188 acc=0.2927+0.0046
+ETA:2.4h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 171, val, loss=1.7176 acc=0.2949+0.0049
+ETA:2.4h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 172, val, loss=1.7107 acc=0.2958+0.0051
+ETA:2.5h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 173, val, loss=1.7428 acc=0.2868+0.0051
+ETA:2.5h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 174, val, loss=1.6983 acc=0.2968+0.0053
+ETA:2.5h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 175, val, loss=1.7257 acc=0.2898+0.0051
+ETA:2.5h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 176, val, loss=1.7269 acc=0.2879+0.0050
+ETA:2.5h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 177, val, loss=1.7254 acc=0.2897+0.0050
+ETA:2.5h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 178, val, loss=1.7387 acc=0.2877+0.0050
+ETA:2.5h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 179, val, loss=1.7339 acc=0.2894+0.0051
+ETA:2.6h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 180, val, loss=1.7304 acc=0.2912+0.0047
+ETA:2.6h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 181, val, loss=1.7592 acc=0.2864+0.0053
+ETA:2.6h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 182, val, loss=1.7208 acc=0.2908+0.0049
+ETA:2.6h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 183, val, loss=1.7201 acc=0.2961+0.0051
+ETA:2.6h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 184, val, loss=1.7174 acc=0.2908+0.0051
+ETA:2.6h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 185, val, loss=1.7231 acc=0.2886+0.0050
+ETA:2.6h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 186, val, loss=1.7390 acc=0.2904+0.0049
+ETA:2.7h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 187, val, loss=1.7259 acc=0.2887+0.0047
+ETA:2.7h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 188, val, loss=1.7167 acc=0.2913+0.0052
+ETA:2.7h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 189, val, loss=1.6961 acc=0.2994+0.0050
+ETA:2.7h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 190, val, loss=1.7434 acc=0.2883+0.0050
+ETA:2.7h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 191, val, loss=1.7155 acc=0.2917+0.0051
+ETA:2.7h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 192, val, loss=1.7335 acc=0.2864+0.0049
+ETA:2.7h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 193, val, loss=1.7212 acc=0.2899+0.0049
+ETA:2.8h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 194, val, loss=1.7439 acc=0.2883+0.0051
+ETA:2.8h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 195, val, loss=1.7449 acc=0.2877+0.0051
+ETA:2.8h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 196, val, loss=1.7155 acc=0.2953+0.0049
+ETA:2.8h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 197, val, loss=1.7255 acc=0.2874+0.0050
+ETA:2.8h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 198, val, loss=1.7138 acc=0.2927+0.0051
+ETA:2.8h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 199, val, loss=1.7040 acc=0.2940+0.0050
+ETA:2.9h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+epoch 200, val, loss=1.7362 acc=0.2876+0.0048
+ETA:2.9h/2.9h
+best epoch 38, best val acc=0.3000 + 0.0050
+10000it [11:36, 14.35it/s]
+best epoch 38, best val acc=0.3000 + 0.0050
+
+Test acc=0.3496 + 0.0017
+
+/home/ty/文档/4/conv4/FEAT-master(2)/checkpoints/MiniImageNet-FEAT-ConvNet-05w01s15q-Pre-DIS/20_0.5_lr0.0001mul10_step_T144T26_b1_bsz080-NoAug
+
+Process finished with exit code 0
