@@ -1,0 +1,277 @@
+/home/ty/anaconda3/envs/py37/bin/python /home/ty/文档/4/对比实验代码/meta-transfer-learning-main/pytorch/run_pre.py 
+{'base_lr': 0.01,
+ 'dataset': 'MiniImageNet',
+ 'dataset_dir': './data/mini/',
+ 'eval_weights': None,
+ 'gamma': 0.5,
+ 'gpu': '1',
+ 'init_weights': None,
+ 'max_epoch': 100,
+ 'meta_label': 'exp1',
+ 'meta_lr1': 0.0001,
+ 'meta_lr2': 0.001,
+ 'model_type': 'ResNet',
+ 'num_batch': 100,
+ 'phase': 'pre_train',
+ 'pre_batch_size': 128,
+ 'pre_custom_momentum': 0.9,
+ 'pre_custom_weight_decay': 0.0005,
+ 'pre_gamma': 0.2,
+ 'pre_lr': 0.1,
+ 'pre_max_epoch': 110,
+ 'pre_step_size': 30,
+ 'seed': 0,
+ 'shot': 1,
+ 'step_size': 10,
+ 'train_query': 15,
+ 'update_step': 50,
+ 'val_query': 15,
+ 'way': 5}
+Using gpu: 1
+Using random seed.
+/home/ty/anaconda3/envs/py37/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:136: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+Epoch 1, Loss=3.4976 Acc=0.0476: 100%|██████████| 67/67 [00:19<00:00,  3.38it/s]
+Epoch 1, Val, Loss=3.0630 Acc=0.2219
+Epoch 2, Loss=2.9197 Acc=0.1905: 100%|██████████| 67/67 [00:16<00:00,  3.96it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 2, Val, Loss=2.6052 Acc=0.2141
+Epoch 3, Loss=3.4402 Acc=0.0952: 100%|██████████| 67/67 [00:17<00:00,  3.94it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 3, Val, Loss=2.6723 Acc=0.2196
+Epoch 4, Loss=3.6337 Acc=0.1429: 100%|██████████| 67/67 [00:17<00:00,  3.85it/s]
+Epoch 4, Val, Loss=2.8209 Acc=0.2269
+Epoch 5, Loss=3.1842 Acc=0.2381: 100%|██████████| 67/67 [00:16<00:00,  4.01it/s]
+Epoch 5, Val, Loss=3.2187 Acc=0.2198
+Epoch 6, Loss=3.4440 Acc=0.1905: 100%|██████████| 67/67 [00:16<00:00,  4.01it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 6, Val, Loss=2.9427 Acc=0.2262
+Epoch 7, Loss=2.9604 Acc=0.1429: 100%|██████████| 67/67 [00:17<00:00,  3.91it/s]
+Epoch 7, Val, Loss=2.0473 Acc=0.2412
+Epoch 8, Loss=3.0591 Acc=0.1429: 100%|██████████| 67/67 [00:34<00:00,  1.92it/s]
+Epoch 8, Val, Loss=1.7711 Acc=0.2464
+Epoch 9, Loss=3.0450 Acc=0.0952: 100%|██████████| 67/67 [00:36<00:00,  1.86it/s]
+Epoch 9, Val, Loss=1.8996 Acc=0.2432
+Epoch 10, Loss=3.6490 Acc=0.0000: 100%|██████████| 67/67 [00:33<00:00,  2.02it/s]
+Best Epoch 8, Best Val acc=0.2464
+Epoch 10, Val, Loss=1.8606 Acc=0.2514
+Running Time: 12m, Estimated Time: 1.9h
+Epoch 11, Loss=3.3541 Acc=0.0476: 100%|██████████| 67/67 [00:33<00:00,  1.97it/s]
+Epoch 11, Val, Loss=2.1498 Acc=0.2536
+Epoch 12, Loss=3.0603 Acc=0.1905: 100%|██████████| 67/67 [00:33<00:00,  2.02it/s]
+Epoch 12, Val, Loss=1.7257 Acc=0.2537
+Epoch 13, Loss=2.1184 Acc=0.4286: 100%|██████████| 67/67 [00:32<00:00,  2.05it/s]
+Epoch 13, Val, Loss=1.7468 Acc=0.2692
+Epoch 14, Loss=2.8641 Acc=0.0952: 100%|██████████| 67/67 [00:33<00:00,  2.00it/s]
+Epoch 14, Val, Loss=1.7397 Acc=0.2641
+Epoch 15, Loss=3.1887 Acc=0.0476: 100%|██████████| 67/67 [00:34<00:00,  1.95it/s]
+Epoch 15, Val, Loss=1.7068 Acc=0.2586
+Epoch 16, Loss=3.1515 Acc=0.2381: 100%|██████████| 67/67 [00:33<00:00,  2.03it/s]
+Epoch 16, Val, Loss=1.6679 Acc=0.2812
+Epoch 17, Loss=3.0149 Acc=0.3333: 100%|██████████| 67/67 [00:34<00:00,  1.95it/s]
+Epoch 17, Val, Loss=1.8226 Acc=0.2653
+Epoch 18, Loss=2.7728 Acc=0.3333: 100%|██████████| 67/67 [00:33<00:00,  1.97it/s]
+Epoch 18, Val, Loss=1.6315 Acc=0.2822
+Epoch 19, Loss=3.4211 Acc=0.1905: 100%|██████████| 67/67 [00:33<00:00,  1.99it/s]
+Epoch 19, Val, Loss=1.6024 Acc=0.2784
+Epoch 20, Loss=2.1104 Acc=0.4286: 100%|██████████| 67/67 [00:33<00:00,  2.01it/s]
+Best Epoch 18, Best Val acc=0.2822
+Epoch 20, Val, Loss=1.6940 Acc=0.2694
+Running Time: 29m, Estimated Time: 2.4h
+Epoch 21, Loss=2.4639 Acc=0.3810: 100%|██████████| 67/67 [00:32<00:00,  2.05it/s]
+Epoch 21, Val, Loss=1.7813 Acc=0.2792
+Epoch 22, Loss=2.6029 Acc=0.3333: 100%|██████████| 67/67 [00:33<00:00,  2.00it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 22, Val, Loss=1.6194 Acc=0.2768
+Epoch 23, Loss=2.0819 Acc=0.3333: 100%|██████████| 67/67 [00:32<00:00,  2.09it/s]
+Epoch 23, Val, Loss=1.7088 Acc=0.2798
+Epoch 24, Loss=2.6851 Acc=0.2381: 100%|██████████| 67/67 [00:33<00:00,  2.02it/s]
+Epoch 24, Val, Loss=2.1053 Acc=0.2741
+Epoch 25, Loss=2.8768 Acc=0.1905: 100%|██████████| 67/67 [00:34<00:00,  1.95it/s]
+Epoch 25, Val, Loss=1.6562 Acc=0.2453
+Epoch 26, Loss=2.4542 Acc=0.2857: 100%|██████████| 67/67 [00:32<00:00,  2.06it/s]
+Epoch 26, Val, Loss=1.6063 Acc=0.2862
+Epoch 27, Loss=2.9758 Acc=0.1905: 100%|██████████| 67/67 [00:34<00:00,  1.93it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 27, Val, Loss=1.6619 Acc=0.2779
+Epoch 28, Loss=2.8818 Acc=0.1905: 100%|██████████| 67/67 [00:32<00:00,  2.04it/s]
+Epoch 28, Val, Loss=1.5963 Acc=0.2967
+Epoch 29, Loss=2.1666 Acc=0.3810: 100%|██████████| 67/67 [00:31<00:00,  2.10it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 29, Val, Loss=1.5976 Acc=0.2719
+Epoch 30, Loss=2.1787 Acc=0.2381: 100%|██████████| 67/67 [00:33<00:00,  2.02it/s]
+Best Epoch 28, Best Val acc=0.2967
+Epoch 30, Val, Loss=1.5994 Acc=0.2936
+  0%|          | 0/67 [00:00<?, ?it/s]Running Time: 46m, Estimated Time: 2.6h
+Epoch 31, Loss=2.2646 Acc=0.3810: 100%|██████████| 67/67 [00:34<00:00,  1.97it/s]
+Epoch 31, Val, Loss=1.5904 Acc=0.2910
+Epoch 32, Loss=2.4284 Acc=0.2857: 100%|██████████| 67/67 [00:33<00:00,  1.98it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 32, Val, Loss=1.5919 Acc=0.2920
+Epoch 33, Loss=2.3271 Acc=0.1905: 100%|██████████| 67/67 [00:33<00:00,  2.03it/s]
+Epoch 33, Val, Loss=1.5813 Acc=0.3017
+Epoch 34, Loss=2.3471 Acc=0.2857: 100%|██████████| 67/67 [00:33<00:00,  2.01it/s]
+Epoch 34, Val, Loss=1.6910 Acc=0.2970
+Epoch 35, Loss=2.0885 Acc=0.3810: 100%|██████████| 67/67 [00:32<00:00,  2.04it/s]
+Epoch 35, Val, Loss=1.5747 Acc=0.2992
+Epoch 36, Loss=1.8815 Acc=0.5714: 100%|██████████| 67/67 [00:33<00:00,  2.00it/s]
+Epoch 36, Val, Loss=1.6200 Acc=0.2973
+Epoch 37, Loss=1.7385 Acc=0.6190: 100%|██████████| 67/67 [00:33<00:00,  1.99it/s]
+Epoch 37, Val, Loss=1.5979 Acc=0.3030
+Epoch 38, Loss=2.0559 Acc=0.4286: 100%|██████████| 67/67 [00:35<00:00,  1.88it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 38, Val, Loss=1.6677 Acc=0.3016
+Epoch 39, Loss=2.4952 Acc=0.2857: 100%|██████████| 67/67 [00:36<00:00,  1.85it/s]
+Epoch 39, Val, Loss=1.6089 Acc=0.2982
+Epoch 40, Loss=1.8640 Acc=0.4762: 100%|██████████| 67/67 [00:33<00:00,  2.01it/s]
+Best Epoch 37, Best Val acc=0.3030
+Epoch 40, Val, Loss=1.6005 Acc=0.3034
+  0%|          | 0/67 [00:00<?, ?it/s]Running Time: 1.1h, Estimated Time: 2.7h
+Epoch 41, Loss=2.0730 Acc=0.4286: 100%|██████████| 67/67 [00:33<00:00,  2.01it/s]
+Epoch 41, Val, Loss=1.5710 Acc=0.3153
+Epoch 42, Loss=2.1451 Acc=0.4286: 100%|██████████| 67/67 [00:34<00:00,  1.97it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 42, Val, Loss=1.6078 Acc=0.3005
+Epoch 43, Loss=1.8648 Acc=0.3810: 100%|██████████| 67/67 [00:34<00:00,  1.94it/s]
+Epoch 43, Val, Loss=1.5917 Acc=0.2989
+Epoch 44, Loss=1.6013 Acc=0.5714: 100%|██████████| 67/67 [00:33<00:00,  1.99it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 44, Val, Loss=1.6286 Acc=0.3012
+Epoch 45, Loss=1.7930 Acc=0.5238: 100%|██████████| 67/67 [00:35<00:00,  1.87it/s]
+Epoch 45, Val, Loss=1.6227 Acc=0.2958
+Epoch 46, Loss=1.9958 Acc=0.5238: 100%|██████████| 67/67 [00:32<00:00,  2.03it/s]
+Epoch 46, Val, Loss=1.5895 Acc=0.2976
+Epoch 47, Loss=2.5425 Acc=0.2857: 100%|██████████| 67/67 [00:33<00:00,  2.00it/s]
+Epoch 47, Val, Loss=1.6027 Acc=0.3055
+Epoch 48, Loss=2.1668 Acc=0.3810: 100%|██████████| 67/67 [00:34<00:00,  1.95it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 48, Val, Loss=1.5938 Acc=0.3036
+Epoch 49, Loss=1.9987 Acc=0.4286: 100%|██████████| 67/67 [00:32<00:00,  2.06it/s]
+Epoch 49, Val, Loss=1.6694 Acc=0.2943
+Epoch 50, Loss=2.1232 Acc=0.4762: 100%|██████████| 67/67 [00:33<00:00,  2.02it/s]
+Best Epoch 41, Best Val acc=0.3153
+Epoch 50, Val, Loss=1.5693 Acc=0.3150
+Running Time: 1.4h, Estimated Time: 2.7h
+Epoch 51, Loss=1.3351 Acc=0.5238: 100%|██████████| 67/67 [00:34<00:00,  1.97it/s]
+Epoch 51, Val, Loss=1.5981 Acc=0.3160
+Epoch 52, Loss=1.8220 Acc=0.5714: 100%|██████████| 67/67 [00:34<00:00,  1.95it/s]
+Epoch 52, Val, Loss=1.5862 Acc=0.3250
+Epoch 53, Loss=2.2251 Acc=0.4762: 100%|██████████| 67/67 [00:35<00:00,  1.88it/s]
+Epoch 53, Val, Loss=1.6168 Acc=0.3106
+Epoch 54, Loss=1.4211 Acc=0.6190: 100%|██████████| 67/67 [00:32<00:00,  2.04it/s]
+Epoch 54, Val, Loss=1.5892 Acc=0.3110
+Epoch 55, Loss=2.5430 Acc=0.1429: 100%|██████████| 67/67 [00:33<00:00,  2.01it/s]
+Epoch 55, Val, Loss=1.5875 Acc=0.3192
+Epoch 56, Loss=2.4501 Acc=0.3333: 100%|██████████| 67/67 [00:31<00:00,  2.14it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 56, Val, Loss=1.5687 Acc=0.3190
+Epoch 57, Loss=1.4011 Acc=0.5238: 100%|██████████| 67/67 [00:34<00:00,  1.97it/s]
+Epoch 57, Val, Loss=1.5715 Acc=0.3170
+Epoch 58, Loss=1.7312 Acc=0.3333: 100%|██████████| 67/67 [00:33<00:00,  1.97it/s]
+Epoch 58, Val, Loss=1.5632 Acc=0.3288
+Epoch 59, Loss=2.4771 Acc=0.3333: 100%|██████████| 67/67 [00:35<00:00,  1.89it/s]
+Epoch 59, Val, Loss=1.6027 Acc=0.3114
+Epoch 60, Loss=2.1310 Acc=0.2857: 100%|██████████| 67/67 [00:35<00:00,  1.90it/s]
+Best Epoch 58, Best Val acc=0.3288
+Epoch 60, Val, Loss=1.5506 Acc=0.3322
+Running Time: 1.6h, Estimated Time: 2.7h
+Epoch 61, Loss=1.5214 Acc=0.5238: 100%|██████████| 67/67 [00:33<00:00,  1.97it/s]
+Epoch 61, Val, Loss=1.5621 Acc=0.3316
+Epoch 62, Loss=1.6618 Acc=0.4762: 100%|██████████| 67/67 [00:33<00:00,  2.02it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 62, Val, Loss=1.5647 Acc=0.3308
+Epoch 63, Loss=1.5416 Acc=0.6190: 100%|██████████| 67/67 [00:32<00:00,  2.05it/s]
+Epoch 63, Val, Loss=1.5635 Acc=0.3308
+Epoch 64, Loss=1.8072 Acc=0.4762: 100%|██████████| 67/67 [00:32<00:00,  2.03it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 64, Val, Loss=1.5794 Acc=0.3236
+Epoch 65, Loss=1.7625 Acc=0.4286: 100%|██████████| 67/67 [00:33<00:00,  2.03it/s]
+Epoch 65, Val, Loss=1.5649 Acc=0.3298
+Epoch 66, Loss=1.5627 Acc=0.5714: 100%|██████████| 67/67 [00:34<00:00,  1.93it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 66, Val, Loss=1.6009 Acc=0.3181
+Epoch 67, Loss=1.4912 Acc=0.5714: 100%|██████████| 67/67 [00:34<00:00,  1.92it/s]
+Epoch 67, Val, Loss=1.5726 Acc=0.3187
+Epoch 68, Loss=1.1635 Acc=0.6667: 100%|██████████| 67/67 [00:35<00:00,  1.91it/s]
+Epoch 68, Val, Loss=1.6204 Acc=0.3190
+Epoch 69, Loss=1.6467 Acc=0.4762: 100%|██████████| 67/67 [00:33<00:00,  2.01it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 69, Val, Loss=1.6339 Acc=0.3152
+Epoch 70, Loss=1.0868 Acc=0.6667: 100%|██████████| 67/67 [00:34<00:00,  1.95it/s]
+Best Epoch 60, Best Val acc=0.3322
+Epoch 70, Val, Loss=1.5819 Acc=0.3218
+  0%|          | 0/67 [00:00<?, ?it/s]Running Time: 1.9h, Estimated Time: 2.8h
+Epoch 71, Loss=1.4094 Acc=0.5238: 100%|██████████| 67/67 [00:33<00:00,  2.03it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 71, Val, Loss=1.5966 Acc=0.3212
+Epoch 72, Loss=1.2890 Acc=0.6667: 100%|██████████| 67/67 [00:32<00:00,  2.04it/s]
+Epoch 72, Val, Loss=1.5945 Acc=0.3236
+Epoch 73, Loss=0.9340 Acc=0.7143: 100%|██████████| 67/67 [00:34<00:00,  1.95it/s]
+Epoch 73, Val, Loss=1.6045 Acc=0.3199
+Epoch 74, Loss=1.3996 Acc=0.6190: 100%|██████████| 67/67 [00:35<00:00,  1.89it/s]
+Epoch 74, Val, Loss=1.6134 Acc=0.3157
+Epoch 75, Loss=1.5451 Acc=0.5238: 100%|██████████| 67/67 [00:33<00:00,  2.00it/s]
+Epoch 75, Val, Loss=1.6042 Acc=0.3193
+Epoch 76, Loss=1.3904 Acc=0.7619: 100%|██████████| 67/67 [00:33<00:00,  1.97it/s]
+Epoch 76, Val, Loss=1.6166 Acc=0.3153
+Epoch 77, Loss=1.1530 Acc=0.7619: 100%|██████████| 67/67 [00:34<00:00,  1.92it/s]
+Epoch 77, Val, Loss=1.6423 Acc=0.3147
+Epoch 78, Loss=1.4433 Acc=0.5238: 100%|██████████| 67/67 [00:32<00:00,  2.06it/s]
+Epoch 78, Val, Loss=1.6110 Acc=0.3234
+Epoch 79, Loss=1.6357 Acc=0.5714: 100%|██████████| 67/67 [00:33<00:00,  2.03it/s]
+Epoch 79, Val, Loss=1.6200 Acc=0.3129
+Epoch 80, Loss=1.5112 Acc=0.6667: 100%|██████████| 67/67 [00:34<00:00,  1.96it/s]
+Best Epoch 60, Best Val acc=0.3322
+Epoch 80, Val, Loss=1.6141 Acc=0.3247
+  0%|          | 0/67 [00:00<?, ?it/s]Running Time: 2.2h, Estimated Time: 2.8h
+Epoch 81, Loss=1.9403 Acc=0.4286: 100%|██████████| 67/67 [00:33<00:00,  2.00it/s]
+Epoch 81, Val, Loss=1.6024 Acc=0.3268
+Epoch 82, Loss=1.7394 Acc=0.5714: 100%|██████████| 67/67 [00:35<00:00,  1.89it/s]
+Epoch 82, Val, Loss=1.5747 Acc=0.3264
+Epoch 83, Loss=1.6325 Acc=0.6190: 100%|██████████| 67/67 [00:32<00:00,  2.05it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 83, Val, Loss=1.5805 Acc=0.3280
+Epoch 84, Loss=1.1130 Acc=0.6667: 100%|██████████| 67/67 [00:33<00:00,  2.01it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 84, Val, Loss=1.5892 Acc=0.3252
+Epoch 85, Loss=1.1599 Acc=0.5714: 100%|██████████| 67/67 [00:33<00:00,  1.99it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 85, Val, Loss=1.5816 Acc=0.3266
+Epoch 86, Loss=1.1662 Acc=0.7143: 100%|██████████| 67/67 [00:34<00:00,  1.95it/s]
+Epoch 86, Val, Loss=1.5900 Acc=0.3286
+Epoch 87, Loss=1.2115 Acc=0.5238: 100%|██████████| 67/67 [00:32<00:00,  2.06it/s]
+Epoch 87, Val, Loss=1.5720 Acc=0.3333
+Epoch 88, Loss=1.1528 Acc=0.6190: 100%|██████████| 67/67 [00:33<00:00,  2.00it/s]
+Epoch 88, Val, Loss=1.6218 Acc=0.3178
+Epoch 89, Loss=1.0669 Acc=0.4286: 100%|██████████| 67/67 [00:33<00:00,  1.99it/s]
+Epoch 89, Val, Loss=1.6237 Acc=0.3078
+Epoch 90, Loss=1.0812 Acc=0.7143: 100%|██████████| 67/67 [00:33<00:00,  2.02it/s]
+Best Epoch 87, Best Val acc=0.3333
+Epoch 90, Val, Loss=1.6115 Acc=0.3134
+Running Time: 2.5h, Estimated Time: 2.8h
+Epoch 91, Loss=1.1513 Acc=0.6190: 100%|██████████| 67/67 [00:32<00:00,  2.04it/s]
+Epoch 91, Val, Loss=1.6199 Acc=0.3111
+Epoch 92, Loss=1.8198 Acc=0.5238: 100%|██████████| 67/67 [00:32<00:00,  2.05it/s]
+Epoch 92, Val, Loss=1.6053 Acc=0.3202
+Epoch 93, Loss=1.0655 Acc=0.7143: 100%|██████████| 67/67 [00:32<00:00,  2.03it/s]
+Epoch 93, Val, Loss=1.6013 Acc=0.3236
+Epoch 94, Loss=1.3822 Acc=0.6667: 100%|██████████| 67/67 [00:33<00:00,  2.01it/s]
+Epoch 94, Val, Loss=1.5947 Acc=0.3214
+Epoch 95, Loss=1.0839 Acc=0.6190: 100%|██████████| 67/67 [00:33<00:00,  1.98it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 95, Val, Loss=1.5976 Acc=0.3203
+Epoch 96, Loss=1.2629 Acc=0.6667: 100%|██████████| 67/67 [00:34<00:00,  1.93it/s]
+Epoch 96, Val, Loss=1.6024 Acc=0.3170
+Epoch 97, Loss=1.3255 Acc=0.6667: 100%|██████████| 67/67 [00:32<00:00,  2.08it/s]
+Epoch 97, Val, Loss=1.5801 Acc=0.3272
+Epoch 98, Loss=0.4841 Acc=0.8571: 100%|██████████| 67/67 [00:32<00:00,  2.08it/s]
+Epoch 98, Val, Loss=1.5958 Acc=0.3205
+Epoch 99, Loss=0.9256 Acc=0.6190: 100%|██████████| 67/67 [00:33<00:00,  2.01it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 99, Val, Loss=1.5937 Acc=0.3229
+Epoch 100, Loss=0.8160 Acc=0.7143: 100%|██████████| 67/67 [00:34<00:00,  1.96it/s]
+Best Epoch 87, Best Val acc=0.3333
+Epoch 100, Val, Loss=1.6009 Acc=0.3215
+Running Time: 2.8h, Estimated Time: 2.8h
+Epoch 101, Loss=1.0206 Acc=0.7143: 100%|██████████| 67/67 [00:33<00:00,  1.98it/s]
+Epoch 101, Val, Loss=1.5925 Acc=0.3248
+Epoch 102, Loss=0.7113 Acc=0.7619: 100%|██████████| 67/67 [00:33<00:00,  2.02it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 102, Val, Loss=1.6080 Acc=0.3222
+Epoch 103, Loss=0.9513 Acc=0.8095: 100%|██████████| 67/67 [00:34<00:00,  1.96it/s]
+Epoch 103, Val, Loss=1.6018 Acc=0.3204
+Epoch 104, Loss=1.4307 Acc=0.5714: 100%|██████████| 67/67 [00:32<00:00,  2.05it/s]
+  0%|          | 0/67 [00:00<?, ?it/s]Epoch 104, Val, Loss=1.5943 Acc=0.3248
+Epoch 105, Loss=0.9061 Acc=0.7619: 100%|██████████| 67/67 [00:32<00:00,  2.05it/s]
+Epoch 105, Val, Loss=1.6001 Acc=0.3192
+Epoch 106, Loss=1.0215 Acc=0.6667: 100%|██████████| 67/67 [00:32<00:00,  2.05it/s]
+Epoch 106, Val, Loss=1.5975 Acc=0.3207
+Epoch 107, Loss=0.8812 Acc=0.7619: 100%|██████████| 67/67 [00:33<00:00,  2.00it/s]
+Epoch 107, Val, Loss=1.6077 Acc=0.3215
+Epoch 108, Loss=0.8256 Acc=0.6667: 100%|██████████| 67/67 [00:33<00:00,  2.03it/s]
+Epoch 108, Val, Loss=1.6098 Acc=0.3178
+Epoch 109, Loss=0.9613 Acc=0.7619: 100%|██████████| 67/67 [00:35<00:00,  1.89it/s]
+Epoch 109, Val, Loss=1.5888 Acc=0.3220
+Epoch 110, Loss=0.7246 Acc=0.8095: 100%|██████████| 67/67 [00:30<00:00,  2.16it/s]
+Best Epoch 87, Best Val acc=0.3333
+Epoch 110, Val, Loss=1.6029 Acc=0.3218
+Running Time: 3.1h, Estimated Time: 2.8h
+
+Process finished with exit code 0
