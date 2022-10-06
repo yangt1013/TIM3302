@@ -1,0 +1,9 @@
+/home/ty/anaconda3/envs/py37/bin/python /home/ty/文档/5/MTUNet-master/test_fsl.py --random False --interval 10 --dataset miniImageNet --base_model resnet18 --channel 512 --num_classes 44 --data_root /home/ty/文档/4/对比实验代码/CloserLookFewShot-master/filelists
+load pre-model miniImageNet_resnet18_no_slot_checkpoint.pth ready
+/home/ty/文档/5/MTUNet-master/data/data_split/miniImageNet/test.csv
+9
+start test: 
+100%|██████████| 2000/2000 [12:33<00:00,  2.65it/s]
+loss:  0.527
+acc_95:  0.321
+interval:  0.0038
